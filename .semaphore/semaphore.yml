@@ -1,0 +1,13 @@
+blocks:
+  - name: Build and push
+    task:
+      secrets:
+        - name: semaphoreci-dockerhub
+      prologue:
+        commands:
+          - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+      jobs:
+        - name: Build and push
+          commands:
+            - checkout
+            - sh build.sh
