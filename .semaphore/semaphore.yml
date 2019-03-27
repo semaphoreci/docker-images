@@ -17,4 +17,4 @@ blocks:
         - name: Build and push
           commands:
             - checkout
-            - sh build.sh
+            - bash build.sh
