@@ -1,0 +1,59 @@
+# This file is generated automaticly
+
+FROM ruby:2.6.1
+
+# Make APT non-interactive
+RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
+RUN echo 'DPkg::Options "--force-confnew";' >> /etc/apt/apt.conf.d/99semaphore
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install Packages
+RUN mkdir -p /usr/share/man/man1
+RUN apt-get update
+RUN apt-get install -y \
+    git \ 
+    mercurial \ 
+    xvfb \ 
+    apt \ 
+    dsdsddsd \ 
+    locales \ 
+    sudo \ 
+    openssh-client \ 
+    ca-certificates \ 
+    tar \ 
+    gzip \ 
+    parallel \ 
+    net-tools \ 
+    netcat \ 
+    unzip \ 
+    zip \ 
+    bzip2 \ 
+    gnupg \ 
+    curl \ 
+    wget
+RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
+RUN locale-gen C.UTF-8 || true
+ENV LANG=C.UTF-8
+
+# Install Docker
+RUN set -ex \
+    && export DOCKER_VERSION=$(curl --silent --fail --retry 3 https://download.docker.com/linux/static/stable/x86_64/ | grep -o -e 'docker-[.0-9]*\.tgz' | sort -r | head -n 1) \ 
+    && DOCKER_URL="https://download.docker.com/linux/static/stable/x86_64/${DOCKER_VERSION}" \ 
+    && echo Docker URL: $DOCKER_URL \ 
+    && curl --silent --show-error --location --fail --retry 3 --output /tmp/docker.tgz "${DOCKER_URL}" \ 
+    && ls -lha /tmp/docker.tgz \ 
+    && tar -xz -C /tmp -f /tmp/docker.tgz \ 
+    && mv /tmp/docker/* /usr/bin \ 
+    && rm -rf /tmp/docker /tmp/docker.tgz \ 
+    && which docker \ 
+    && (docker version || true)
+
+# Install Compose
+RUN set -ex \
+    && COMPOSE_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/docker-compose-latest" \ 
+    && curl --silent --show-error --location --fail --retry 3 --output /usr/bin/docker-compose $COMPOSE_URL \ 
+    && chmod +x /usr/bin/docker-compose \ 
+    && docker-compose version
+
+# Entrypoint
+CMD ["/bin/sh"]
