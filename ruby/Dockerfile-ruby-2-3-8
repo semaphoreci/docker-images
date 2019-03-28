@@ -20,6 +20,8 @@ RUN apt-get install -y \
     apt-transport-https \ 
     ca-certificates \ 
     openssh-client \ 
+    software-properties-common \ 
+    python-software-properties \ 
     tar \ 
     lsb-core \ 
     gzip \ 
