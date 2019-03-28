@@ -6,7 +6,7 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: Build and push
+  - name: Build images
     task:
       secrets:
         - name: semaphoreci-dockerhub
@@ -14,20 +14,10 @@ blocks:
         commands:
           - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
       jobs:
-        - name: Build and push
+        - name: Build
           commands:
             - checkout
-            - bash build.sh
-      jobs:
-        - name: Test
-          commands:
-            - checkout
-            - echo "test"
-      jobs:
-        - name: Push
-          commands:
-            - checkout
-            - echo "push"
-
-
+            - echo "bash build.sh"
+            - echo "goss test"
+            - echo "bash push.sh"
 
