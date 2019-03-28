@@ -7,6 +7,6 @@ for dir in */; do
   for file in $repo/*; do
     dockerfile=`basename $file`
     version=$(echo $dockerfile | awk -F"$repo-" '{print $2}')
-    docker build -t semaphoreci/$repo:${version//-/.} -f $file $dir
+    docker push semaphoreci/$repo:${version//-/.}
   done
 done

@@ -18,3 +18,16 @@ blocks:
           commands:
             - checkout
             - bash build.sh
+      jobs:
+        - name: Test
+          commands:
+            - checkout
+            - echo "test"
+      jobs:
+        - name: Push
+          commands:
+            - checkout
+            - echo "push"
+
+
+
