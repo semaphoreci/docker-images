@@ -43,9 +43,9 @@ ENV DOCKER_COMPOSE=1.23.2
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 RUN sudo add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \ 
-    apt-get update -qq  \ 
-    apt-cache policy docker-ce \ 
-    apt-get install -y docker-ce
+    && apt-get update -qq  \ 
+    && apt-cache policy docker-ce \ 
+    && apt-get install -y docker-ce
 
 # Install Compose
 RUN wget -q \
