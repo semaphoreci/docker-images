@@ -18,6 +18,7 @@ blocks:
           commands:
             - checkout
             - echo "bash build.sh"
+            - curl -fsSL https://goss.rocks/install | sh
             - echo "goss test"
             - echo "bash push.sh"
 
