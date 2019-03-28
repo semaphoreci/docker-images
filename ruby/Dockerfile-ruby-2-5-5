@@ -21,6 +21,7 @@ RUN apt-get install -y \
     ca-certificates \ 
     openssh-client \ 
     tar \ 
+    lsb-core \ 
     gzip \ 
     parallel \ 
     net-tools \ 
