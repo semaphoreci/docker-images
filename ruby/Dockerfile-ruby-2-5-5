@@ -41,12 +41,17 @@ ENV LANG=C.UTF-8
 
 # Install Docker
 ENV DOCKER_COMPOSE=1.23.2
-RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-RUN sudo add-apt-repository \
-    "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \ 
-    && apt-get update -qq  \ 
-    && apt-cache policy docker-ce \ 
-    && apt-get install -y docker-ce
+RUN set -ex \
+    && export DOCKER_VERSION=$(curl --silent --fail --retry 3 https://download.docker.com/linux/static/stable/x86_64/ | grep -o -e 'docker-[.0-9]*\.tgz' | sort -r | head -n 1) \ 
+    && DOCKER_URL="https://download.docker.com/linux/static/stable/x86_64/${DOCKER_VERSION}" \ 
+    && echo Docker URL: $DOCKER_URL \ 
+    && curl --silent --show-error --location --fail --retry 3 --output /tmp/docker.tgz "${DOCKER_URL}" \ 
+    && ls -lha /tmp/docker.tgz \ 
+    && tar -xz -C /tmp -f /tmp/docker.tgz \ 
+    && mv /tmp/docker/* /usr/bin \ 
+    && rm -rf /tmp/docker /tmp/docker.tgz \ 
+    && which docker \ 
+    && (docker version || true)
 
 # Install Compose
 RUN wget -q \
