@@ -15,6 +15,5 @@ for dir in */; do
           sed "s|_ruby_version_|$version|g" goss_ruby.yaml > /tmp/tmp/goss.yaml ;;
     esac
     docker run -v /tmp/tmp:/goss semaphoreci/$repo:${version//-/.} sh -c 'cd /goss; ./goss validate' 
-    fi
   done
 done
