@@ -13,8 +13,13 @@ blocks:
       prologue:
         commands:
           - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+          - checkout
       jobs:
-        - name: Build and push
+        - name: Build and push ruby
           commands:
-            - checkout
-            - bash build.sh
+            - bash build.sh ruby
+
+      jobs:
+        - name: Build and push android
+          commands:
+            - bash build.sh android
