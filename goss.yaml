@@ -1,2 +1,3 @@
-gossfile:
-  goss_common/goss_git_package.yaml: {}
+package:
+  git:
+    installed: true

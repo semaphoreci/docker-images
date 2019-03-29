@@ -8,7 +8,6 @@ for dir in */; do
     dockerfile=`basename $file`
     version=$(echo $dockerfile | awk -F"$repo-" '{print $2}')
     docker build -t semaphoreci/$repo:${version//-/.} -f $file $dir
-    docker ps | grep $repo:${version//-/.}
     time dgoss run semaphoreci/$repo:${version//-/.}
   done
 done
