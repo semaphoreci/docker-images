@@ -2,5 +2,5 @@ package:
   git:
     installed: true
 command:
-  ruby --version:
+  ruby --version| grep _ruby_version_:
     exit-status: 0
