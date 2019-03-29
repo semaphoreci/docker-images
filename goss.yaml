@@ -1,13 +1,3 @@
-file:
-  /goss/docker_output.log:
-    exists: true
-    contains:
-# if DEBUG is not set, we verify that "Debugger is active" string doesn't show up
-{{if getEnv "DEBUG" | eq ""}}
-    - "!Debugger is active!"
-{{else}}
-    - "Debugger is active!"
-{{end}}
 package:
   git:
     installed: true
