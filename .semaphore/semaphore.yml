@@ -19,7 +19,6 @@ blocks:
           commands:
             - bash build.sh ruby
 
-      jobs:
         - name: Build and push android
           commands:
             - bash build.sh android
