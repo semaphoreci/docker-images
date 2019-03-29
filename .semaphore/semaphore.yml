@@ -17,10 +17,7 @@ blocks:
         - name: Build
           commands:
             - checkout
-            - curl -L https://github.com/aelsabbahy/goss/releases/download/master/goss-linux-amd64 -o goss
-            - chmod +x goss && sudo mv goss /usr/local/bin/
-            - curl -L https://raw.githubusercontent.com/aelsabbahy/goss/master/extras/dgoss/dgoss -o dgoss
-            - chmod +x dgoss && sudo mv dgoss /usr/local/bin/
+            - curl -L https://goss.rocks/install | sudo sh
             - bash build.sh
             - echo "bash push.sh"
 
