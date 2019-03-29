@@ -7,12 +7,13 @@ for dir in */; do
   for file in $repo/*; do
     dockerfile=`basename $file`
     version=$(echo $dockerfile | awk -F"$repo-" '{print $2}')
+    gversion=$version
     docker build -t semaphoreci/$repo:${version//-/.} -f $file $dir || ((i++))
     echo "" > /tmp/tmp/docker_output.log 
     cp $(which goss) /tmp/tmp/
     case $repo in
       "ruby")
-          sed "s|_ruby_version_|$version|g" goss_ruby.yaml > /tmp/tmp/goss.yaml ;;
+          sed "s|_ruby_version_|$gversion|g" goss_ruby.yaml > /tmp/tmp/goss.yaml ;;
     esac
     docker run -v /tmp/tmp:/goss semaphoreci/$repo:${version//-/.} sh -c 'cd /goss; ./goss validate' 
   done
