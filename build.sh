@@ -12,14 +12,9 @@ for dir in */; do
     cp $(which goss) /tmp/tmp/
     case $repo in
       "ruby")
-          sed "s|_ruby_version_|$version" goss_ruby.yaml > /tmp/tmp.goss.yaml ;;
+          sed "s|_ruby_version_|$version|g" goss_ruby.yaml > /tmp/tmp/goss.yaml ;;
     esac
-    docker run -v /tmp/tmp:/goss semaphoreci/$repo:${version//-/.} sh -c 'cd /goss; ./goss validate' >/tmp/tmp/docker_output.log 2>/tmp/tmp/docker_output.log
-    dock=$?
-    if (( $dock > 0 )); then 
-      echo "Error:"
-      cat /tmp/tmp/docker_output.log
-      exit $dock
+    docker run -v /tmp/tmp:/goss semaphoreci/$repo:${version//-/.} sh -c 'cd /goss; ./goss validate' 
     fi
   done
 done
