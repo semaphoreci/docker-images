@@ -13,7 +13,7 @@ for dir in */; do
     cp goss.yaml /tmp/tmp/
     docker run -v /tmp/tmp:/goss semaphoreci/$repo:${version//-/.} sh -c 'cd /goss; ./goss validate' >/tmp/tmp/docker_output.log 2>/tmp/tmp/docker_output.log
     dock=$?
-    if [[ "$dock" = "0" ]]; then 
+    if [ $dock ]; then 
       echo "Error:"
       cat /tmp/tmp/docker_output.log
       exit $dock
