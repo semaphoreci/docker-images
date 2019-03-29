@@ -1,3 +1,6 @@
 package:
   git:
     installed: true
+command:
+  ruby --version:
+    exit-status: 0
