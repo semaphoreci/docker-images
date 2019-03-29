@@ -16,7 +16,7 @@ for dir in */; do
           sed "s|_ruby_version_|${version//-/,}|g" goss_ruby.yaml > /tmp/tmp/goss.yaml ;;
     esac
     docker run -v /tmp/tmp:/goss semaphoreci/$repo:${version//-/.} sh -c 'cd /goss; ./goss validate' >/tmp/tmp/docker_output.log 2>/tmp/tmp/docker_output.log
-    if [[ grep 'Failed: 0' /tmp/tmp/docker_output.log ]]; then
+    if [ grep 'Failed: 0' /tmp/tmp/docker_output.log ]; then
       cat /tmp/tmp/docker_output.log
       exit 1
     fi
