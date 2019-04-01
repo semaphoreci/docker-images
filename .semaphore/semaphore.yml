@@ -6,18 +6,20 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: Build images
+  - name: Build and push
     task:
       secrets:
         - name: semaphoreci-dockerhub
       prologue:
         commands:
           - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+          - checkout
+          - curl -L https://goss.rocks/install | sudo sh
       jobs:
-        - name: Build
+        - name: Build and push ruby
           commands:
-            - checkout
-            - curl -L https://goss.rocks/install | sudo sh
-            - bash build.sh
-            - echo "bash push.sh"
+            - bash build.sh ruby
 
+        - name: Build and push android
+          commands:
+            - bash build.sh android
