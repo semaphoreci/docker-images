@@ -14,6 +14,9 @@ for dir in */; do
     case $repo in
       "ruby")
           sed "s|_ruby_version_|${version//-/.}|g" goss_ruby.yaml > /tmp/tmp/goss.yaml ;;
+      "android")
+          cat goss_android.yaml > /tmp/tmp/goss.yaml ;;
+
     esac
     docker run -v /tmp/tmp:/goss semaphoreci/$repo:${version//-/.} sh -c 'cd /goss; ./goss validate' >/tmp/tmp/docker_output.log 2>/tmp/tmp/docker_output.log
     cat /tmp/tmp/docker_output.log
