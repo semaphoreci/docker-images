@@ -22,5 +22,4 @@ for file in ${BUILD_DIR///}/*; do
     if ! grep -q 'Failed: 0' /tmp/tmp/docker_output.log; then
       exit 1
     fi
-  done
 done
