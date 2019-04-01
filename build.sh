@@ -7,7 +7,7 @@ cp $(which goss) /tmp/tmp/
 
 BUILD_DIR=$1
 
-for dir in ${BUILD_DIR///}/*; do
+for file in ${BUILD_DIR///}/*; do
   dockerfile=`basename $file`
   version=$(echo $dockerfile | awk -F"${BUILD_DIR///}-" '{print $2}')
   docker build -t semaphoreci/${BUILD_DIR///}:${version//-/.} -f $file ${BUILD_DIR///}
