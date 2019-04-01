@@ -1,6 +1,8 @@
 package:
   git:
     installed: true
+  mercurial:
+    installed: true
 command:
   ruby --version| grep _ruby_version_:
     exit-status: 0
