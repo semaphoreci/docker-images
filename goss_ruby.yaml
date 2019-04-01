@@ -23,8 +23,6 @@ package:
     installed: true
   tar:
     installed: true
-  lsb-core:
-    installed: true
   lsb-release:
     installed: true
   gzip:
@@ -52,9 +50,9 @@ package:
   tree:
     installed: true
 command:
-  ruby --version| grep _ruby_version_:
-    exit-status: 0
-  docker version:
+  docker -v:
     exit-status: 0
   docker-compose --version:
+    exit-status: 0
+  ruby --version| grep _ruby_version_:
     exit-status: 0
