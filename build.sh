@@ -11,7 +11,7 @@ for file in ${BUILD_DIR///}/*; do
   dockerfile=`basename $file`
   version=$(echo $dockerfile | awk -F"${BUILD_DIR///}-" '{print $2}')
   docker build -t semaphoreci/${BUILD_DIR///}:${version//-/.} -f $file ${BUILD_DIR///}
-  case $repo in
+  case $BUILD_DIR in
     "ruby")
       sed "s|_ruby_version_|${version//-/.}|g" goss_ruby.yaml > /tmp/tmp/goss.yaml ;;
     "android")
