@@ -49,6 +49,10 @@ package:
     installed: true
   tree:
     installed: true
+  google-cloud-sdk:
+    installed: true
+  libqt5widgets5:
+    installed: true
 command:
   docker -v:
     exit-status: 0
@@ -57,4 +61,24 @@ command:
   gradle -v:
     exit-status: 0
   env | grep -q ANDROID_HOME:
+    exit-status: 0
+  sdkmanager --version:
+    exit-status: 0
+  env | grep -q LD_LIBRARY_PATH:
+    exit-status: 0
+  sdkmanager --list|grep -q 'build-tools/26.0':
+    exit-status: 0
+  sdkmanager --list|grep -q 'build-tools/27.0':
+    exit-status: 0
+  sdkmanager --list|grep -q 'build-tools/28.0':
+    exit-status: 0
+  sdkmanager --list|grep -q 'emulator':
+    exit-status: 0
+  sdkmanager --list|grep -q 'patcher':
+    exit-status: 0
+  sdkmanager --list|grep -q 'platform-tools':
+    exit-status: 0
+  sdkmanager --list|grep -q 'emulator':
+    exit-status: 0
+  sdkmanager --list|grep -q 'platforms/android':
     exit-status: 0
