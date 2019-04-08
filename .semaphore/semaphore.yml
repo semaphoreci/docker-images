@@ -22,3 +22,7 @@ blocks:
         - name: Build and push android
           commands:
             - bash build.sh android
+
+        - name: Build and push ubuntu
+          commands:
+            - bash build.sh ubuntu
