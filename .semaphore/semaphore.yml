@@ -27,6 +27,6 @@ blocks:
           commands:
             - bash build.sh ubuntu
 
-        - name: Build and push ubuntu
+        - name: Build and push rust
           commands:
             - bash build.sh rust
