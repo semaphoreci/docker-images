@@ -54,5 +54,5 @@ command:
     exit-status: 0
   docker-compose --version:
     exit-status: 0
-  ghc --version| grep _haskell_version_:
+  stack path| grep _ghc_version_:
     exit-status: 0
