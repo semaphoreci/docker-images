@@ -29,7 +29,6 @@ verify()
     echo 0
   fi
 }
-
 for file in ${BUILD_DIR///}/*; do
   dockerfile=`basename $file`
   version=$(echo $dockerfile | awk -F"${BUILD_DIR///}-" '{print $2}')
