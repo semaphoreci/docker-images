@@ -16,22 +16,6 @@ blocks:
           - checkout
           - curl -L https://goss.rocks/install | sudo sh
       jobs:
-        - name: Build and push ruby
-          commands:
-            - bash build.sh ruby
-
-        - name: Build and push android
-          commands:
-            - bash build.sh android
-
-        - name: Build and push ubuntu
-          commands:
-            - bash build.sh ubuntu
-
-        - name: Build and push rust
-          commands:
-            - bash build.sh rust
-
         - name: Build and push haskell
           commands:
             - bash build.sh haskell
