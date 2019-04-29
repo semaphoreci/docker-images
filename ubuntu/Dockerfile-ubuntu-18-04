@@ -65,5 +65,11 @@ RUN wget -q \
 # Entrypoint
 CMD ["/bin/sh"]
 
+# Create semaphore user
+RUN apt-get install -y sudo
+RUN groupadd semaphore
+RUN useradd -g semaphore --shell /bin/bash --create-home semaphore
+RUN echo 'semaphore ALL=NOPASSWD: ALL' >> /etc/sudoers.d/50-semaphore
+
 # User
 USER semaphore
