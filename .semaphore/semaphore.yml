@@ -35,3 +35,7 @@ blocks:
         - name: Build and push haskell
           commands:
             - bash build.sh haskell
+
+        - name: Build and push ruby with nodejs
+          commands:
+            - bash build.sh ruby-node
