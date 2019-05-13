@@ -56,5 +56,5 @@ command:
     exit-status: 0
   ruby --version| grep _ruby_version_:
     exit-status: 0
-  node --version| grep v10.15.3:
+  node --version| grep 10.15:
     exit-status: 0
