@@ -13,6 +13,8 @@ verify()
   case $1 in
     "ruby")
       sed "s|_ruby_version_|${version//-/.}|g" goss/goss_ruby.yaml > /tmp/tmp/goss.yaml ;;
+    "ruby-node")
+      sed "s|_ruby_version_|${version//-/.}|g" goss/goss_ruby-node.yaml > /tmp/tmp/goss.yaml ;;
     "android")
       cat goss/goss_android.yaml > /tmp/tmp/goss.yaml ;;
     "rust")
