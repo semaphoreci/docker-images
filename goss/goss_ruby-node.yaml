@@ -56,5 +56,5 @@ command:
     exit-status: 0
   ruby --version| grep _ruby_version_:
     exit-status: 0
-  nvm current:
+  node --version| grep v10.15.3:
     exit-status: 0
