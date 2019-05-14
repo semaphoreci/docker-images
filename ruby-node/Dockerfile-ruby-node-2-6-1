@@ -64,3 +64,7 @@ RUN wget -q \
 
 # Entrypoint
 CMD ["/bin/sh"]
+
+# Download Android SDK
+RUN curl -o- https://deb.nodesource.com/setup_10.x | bash \
+    && apt-get install -y nodejs
