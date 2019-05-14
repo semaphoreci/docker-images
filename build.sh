@@ -10,7 +10,10 @@ verify()
 {
   version=$2
   echo "" > /tmp/tmp/docker_output.log 
-  case $1 in
+  name=$1
+  tag=""
+  [[ "$3" ]] &&  name=${name}-$3 && tag="-$3"
+  case ${name} in
     "ruby")
       sed "s|_ruby_version_|${version//-/.}|g" goss/goss_ruby.yaml > /tmp/tmp/goss.yaml ;;
     "ruby-node")
@@ -24,7 +27,7 @@ verify()
     "ubuntu")
       sed "s|_ubuntu_version_|${version//-/.}|g" goss/goss_ubuntu.yaml > /tmp/tmp/goss.yaml ;;
   esac
-  docker run -v /tmp/tmp:/goss semaphoreci/${BUILD_DIR///}:${version//-/.} sh -c 'cd /goss; ./goss validate' >/tmp/tmp/docker_output.log 2>/tmp/tmp/docker_output.log
+  docker run -v /tmp/tmp:/goss semaphoreci/${BUILD_DIR///}:${version//-/.}${tag} sh -c 'cd /goss; ./goss validate' >/tmp/tmp/docker_output.log 2>/tmp/tmp/docker_output.log
   if ! grep -q 'Failed: 0' /tmp/tmp/docker_output.log; then
     echo 1
   else
@@ -34,11 +37,14 @@ verify()
 for file in ${BUILD_DIR///}/*; do
   dockerfile=`basename $file`
   version=$(echo $dockerfile | awk -F"${BUILD_DIR///}-" '{print $2}')
-  docker build -t semaphoreci/${BUILD_DIR///}:${version//-/.} -f $file ${BUILD_DIR///}
-  status=$(verify ${BUILD_DIR} ${version} )
+  tag=$(echo $dockerfile | awk -F"${BUILD_DIR///}-" '{print $3}')
+  image_tag=""
+  [[ "$tag" ]] &&  image_tag="-$tag"
+  docker build -t semaphoreci/${BUILD_DIR///}:${version//-/.}${image_tag} -f $file ${BUILD_DIR///}
+  status=$(verify ${BUILD_DIR} ${version} ${tag})
   if [ $status == "1" ]; then 
     cat /tmp/tmp/docker_output.log
     exit 1
   fi
-    docker push semaphoreci/${BUILD_DIR///}:${version//-/.}
+    docker push semaphoreci/${BUILD_DIR///}:${version//-/.}${image_tag}
 done
