@@ -36,8 +36,8 @@ verify()
 }
 for file in ${BUILD_DIR///}/*; do
   dockerfile=`basename $file`
-  version=$(echo $dockerfile | awk -F"${BUILD_DIR///}-" '{print $2}')
-  tag=$(echo $dockerfile | awk -F"${BUILD_DIR///}-" '{print $3}')
+  version=$(echo $dockerfile | awk -F"-${BUILD_DIR///}-" '{print $2}')
+  tag=$(echo $dockerfile | awk -F"-${BUILD_DIR///}-" '{print $3}')
   image_tag=""
   [[ "$tag" ]] &&  image_tag="-$tag"
   docker build -t semaphoreci/${BUILD_DIR///}:${version//-/.}${image_tag} -f $file ${BUILD_DIR///}
