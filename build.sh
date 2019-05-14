@@ -27,7 +27,7 @@ verify()
     "ubuntu")
       sed "s|_ubuntu_version_|${version//-/.}|g" goss/goss_ubuntu.yaml > /tmp/tmp/goss.yaml ;;
     "python")
-      sed "s|_python_version_|${version//\.[a-z]*[a-z]/}|g" goss/goss_python.yaml > /tmp/tmp/goss.yaml ;;
+      cat goss/goss_python.yaml > /tmp/tmp/goss.yaml ;;
   esac
   docker run -v /tmp/tmp:/goss semaphoreci/${BUILD_DIR///}:${version//-/.}${tag} sh -c 'cd /goss; ./goss validate' >/tmp/tmp/docker_output.log 2>/tmp/tmp/docker_output.log
   if ! grep -q 'Failed: 0' /tmp/tmp/docker_output.log; then

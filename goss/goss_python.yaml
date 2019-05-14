@@ -54,5 +54,3 @@ command:
     exit-status: 0
   docker-compose --version:
     exit-status: 0
-  python --version| grep _python_version_:
-    exit-status: 0
