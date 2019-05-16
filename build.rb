@@ -51,12 +51,13 @@ class SemaphoreRegistry
       parts = f.split("-")
       repo = parts[1]
       # Get tag from filename - 1.9-node
+      version = parts[2]
       tag = parts[2...parts.length].map { |k| k }.join("-")
       if !self.search(repo,tag)
         @logger.info("Building #{repo} #{tag}")
         self.run("docker build -t semaphoreci/#{repo}:#{tag} -f #{dir}/#{f} #{dir}")
         @logger.info("Running Tests")
-        self.run("GOSS_FILES_PATH=tests/goss GOSS_VARS=vars.yaml GOSS_FILES_STRATEGY=cp dgoss run -e PACKAGE=\"#{repo}\" -e VERSION=\"#{tag}\" semaphoreci/#{repo}:#{tag} /bin/sleep 3600")
+        self.run("GOSS_FILES_PATH=tests/goss GOSS_VARS=vars.yaml GOSS_FILES_STRATEGY=cp dgoss run -e PACKAGE=\"#{repo}\" -e VERSION=\"#{version}\" semaphoreci/#{repo}:#{tag} /bin/sleep 3600")
       end
     end
   end
