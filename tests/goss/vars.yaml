@@ -43,7 +43,7 @@ ruby:
 
 python:
   commands:
-  - python --version
+  - python --version 2>&1
 
 rust:
   commands:
