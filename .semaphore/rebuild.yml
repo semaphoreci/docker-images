@@ -2,10 +2,10 @@ version: v1.0
 name: First pipeline example
 agent:
   machine:
-    type: e1-standard-2
+    type: e1-standard-8
     os_image: ubuntu1804
 execution_time_limit:
-  hours: 3
+  hours: 6
 
 blocks:
   - name: Build and push
@@ -24,32 +24,28 @@ blocks:
       jobs:
         - name: Build and push ruby
           commands:
-            - bundle exec ruby build.rb -d dockerfiles/ruby
+            - bundle exec ruby build.rb -d dockerfiles/ruby -r
 
         - name: Build and push android
           commands:
-            - bundle exec ruby build.rb -d dockerfiles/android
+            - bundle exec ruby build.rb -d dockerfiles/android -r
 
         - name: Build and push ubuntu
           commands:
-            - bundle exec ruby build.rb -d dockerfiles/ubuntu
+            - bundle exec ruby build.rb -d dockerfiles/ubuntu -r
 
         - name: Build and push rust
           commands:
-            - bundle exec ruby build.rb -d dockerfiles/rust
+            - bundle exec ruby build.rb -d dockerfiles/rust -r
 
         - name: Build and push haskell
           commands:
-            - bundle exec ruby build.rb -d dockerfiles/haskell
+            - bundle exec ruby build.rb -d dockerfiles/haskell -r
 
         - name: Build and push python
           commands:
-            - bundle exec ruby build.rb -d dockerfiles/python
+            - bundle exec ruby build.rb -d dockerfiles/python -r
 
         - name: Build and push golang
           commands:
-            - bundle exec ruby build.rb -d dockerfiles/golang
-
-promotions:
-  - name: Rebuild all containers
-    pipeline_file: "rebuild.yml"
+            - bundle exec ruby build.rb -d dockerfiles/golang -r

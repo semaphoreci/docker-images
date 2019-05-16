@@ -64,7 +64,7 @@ end
 options = OpenStruct.new
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: %s [options]' % $0
-  opts.on('-d', '--dir TAG', 'Dockerfiles dir.') { |o| options[:dir] = o }
+  opts.on('-d', '--dir DIR', 'Dockerfiles dir.') { |o| options[:dir] = o }
   opts.on('-r', '--rebuild', 'Rebuild all images') { |o| options[:rebuild] = o }
   opts.on_tail("-h", "--help", "Show help") do
     puts opts
