@@ -1,6 +1,6 @@
 # This file is generated automaticly
 
-FROM ruby:2.5.1
+FROM ruby:2.4.5
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
@@ -65,3 +65,7 @@ RUN wget -q \
 
 # Entrypoint
 CMD ["/bin/sh"]
+
+# Install NodeJS
+RUN curl -o- https://deb.nodesource.com/setup_10.x | bash \
+    && apt-get install -y nodejs

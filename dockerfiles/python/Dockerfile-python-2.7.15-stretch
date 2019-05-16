@@ -1,6 +1,6 @@
 # This file is generated automaticly
 
-FROM ruby:2.5.1
+FROM python:2.7.15-stretch
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
