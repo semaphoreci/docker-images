@@ -12,12 +12,12 @@ blocks:
         - name: semaphoreci-dockerhub
       prologue:
         commands:
+          - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+          - curl -L https://goss.rocks/install | sudo sh
+          - checkout
           - cache restore gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock),gems-$SEMAPHORE_GIT_BRANCH-,gems-master-
           - bundle install --path vendor/bundle
           - cache store gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock) vendor/bundle
-          - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-          - checkout
-          - curl -L https://goss.rocks/install | sudo sh
       jobs:
         - name: Build and push ruby
           commands:
