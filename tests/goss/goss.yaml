@@ -1,0 +1,69 @@
+package:
+{{range .Vars.common.packages}}
+  {{.}}:
+    installed: true
+{{end}}
+{{if getEnv "PACKAGE" | regexMatch "android"}}
+{{range .Vars.android.packages}}
+  {{.}}:
+    installed: true
+{{end}}
+{{end}}
+
+command:
+{{range .Vars.common.commands}}
+  {{.}}:
+    exit-status: 0
+{{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "ruby"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.ruby.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "ruby-node"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.ruby.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{range .Vars.node.commands}}
+  {{.}}:
+    exit-status: 0
+{{end}}
+{{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "python"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.python.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "rust"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.rust.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "haskell"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.haskell.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "golang"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.haskell.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{end}}

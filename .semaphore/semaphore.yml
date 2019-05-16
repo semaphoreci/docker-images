@@ -12,31 +12,37 @@ blocks:
         - name: semaphoreci-dockerhub
       prologue:
         commands:
+          - cache restore gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock),gems-$SEMAPHORE_GIT_BRANCH-,gems-master-
+          - bundle install --path vendor/bundle
+          - cache store gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock) vendor/bundle
           - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
           - checkout
           - curl -L https://goss.rocks/install | sudo sh
       jobs:
         - name: Build and push ruby
           commands:
-            - bash build.sh ruby
+            - bundle exec ruby build.rb -d dockerfiles/ruby
 
         - name: Build and push android
           commands:
-            - bash build.sh android
+            - bundle exec ruby build.rb -d dockerfiles/android
 
         - name: Build and push ubuntu
           commands:
-            - bash build.sh ubuntu
+            - bundle exec ruby build.rb -d dockerfiles/ubuntu
 
         - name: Build and push rust
           commands:
-            - bash build.sh rust
+            - bundle exec ruby build.rb -d dockerfiles/rust
 
         - name: Build and push haskell
           commands:
-            - bash build.sh haskell
-        
+            - bundle exec ruby build.rb -d dockerfiles/haskell
+
         - name: Build and push python
           commands:
-            - bash build.sh python
+            - bundle exec ruby build.rb -d dockerfiles/python
 
+        - name: Build and push golang
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/golang

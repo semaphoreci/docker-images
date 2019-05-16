@@ -1,0 +1,62 @@
+common:
+  packages:
+  - git
+  - xvfb
+  - apt
+  - locales
+  - sudo
+  - apt-transport-https
+  - ca-certificates
+  - openssh-client
+  - software-properties-common
+  - build-essential
+  - tar
+  - lsb-release
+  - gzip
+  - parallel
+  - net-tools
+  - netcat
+  - unzip
+  - zip
+  - bzip2
+  - gnupg
+  - curl
+  - wget
+  - build-essential
+  - tree
+  commands:
+  - "docker -v"
+  - "docker-compose --version"
+
+android:
+  packages:
+  - google-cloud-sdk
+  - libqt5widgets5
+
+ubuntu:
+  commands:
+  - lsb_release -a 2>/dev/null | grep Release|awk '{print $2}'|
+
+ruby:
+  commands:
+  - ruby --version
+
+python:
+  commands:
+  - python --version
+
+rust:
+  commands:
+    - rustc --version
+
+haskell:
+  commands:
+  - ghc --version
+
+node:
+  commands:
+  - node --version
+
+golang:
+  commands:
+  - go version
