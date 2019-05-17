@@ -1,4 +1,4 @@
-# This file is generated automaticly
+# This file is generated automatically
 
 FROM php:7.0.33-cli-stretch
 

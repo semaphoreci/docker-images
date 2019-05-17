@@ -1,4 +1,4 @@
-# This file is generated automaticly
+# This file is generated automatically
 
 FROM php:5.6.40-apache-stretch
 
