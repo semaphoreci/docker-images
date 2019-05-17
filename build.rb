@@ -39,7 +39,7 @@ class SemaphoreRegistry
     end
   end
 
-  def self.build(dir,rebuild)
+  def self.build(dir,rebuild,test)
     files = Dir.entries(dir).select {|f| !File.directory? f }
     files.each do |f|
       # e.g Dockerfile-golang-1.9
