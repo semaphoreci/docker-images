@@ -65,31 +65,31 @@ blocks:
           - bundle install --path vendor/bundle
           - cache store gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock) vendor/bundle
       jobs:
-        - name: Build and push ruby
+        - name: Build and test ruby
           commands:
             - bundle exec ruby build.rb -d dockerfiles/ruby -t
 
-        - name: Build and push android
+        - name: Build and test android
           commands:
             - bundle exec ruby build.rb -d dockerfiles/android -t
 
-        - name: Build and push ubuntu
+        - name: Build and test ubuntu
           commands:
             - bundle exec ruby build.rb -d dockerfiles/ubuntu -t
 
-        - name: Build and push rust
+        - name: Build and test rust
           commands:
             - bundle exec ruby build.rb -d dockerfiles/rust -t
 
-        - name: Build and push haskell
+        - name: Build and test haskell
           commands:
             - bundle exec ruby build.rb -d dockerfiles/haskell -t
 
-        - name: Build and push python
+        - name: Build and test python
           commands:
             - bundle exec ruby build.rb -d dockerfiles/python -t
 
-        - name: Build and push golang
+        - name: Build and test golang
           commands:
             - bundle exec ruby build.rb -d dockerfiles/golang -t
 
