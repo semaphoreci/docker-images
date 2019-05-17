@@ -4,13 +4,13 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
-execution_time_limit:
-  hours: 3
 
 blocks:
   - name: Build test and push to dockerhub
+    execution_time_limit:
+      hours: 8
     skip:
-        when: "branch != 'master'"
+      when: "branch != 'master'"
     task:
       secrets:
         - name: semaphoreci-dockerhub
@@ -58,8 +58,10 @@ blocks:
 
 
   - name: Test images
+    execution_time_limit:
+      hours: 8
     skip:
-        when: "branch = 'master' OR tag = '.*'"
+      when: "branch = 'master' OR tag = '.*'"
     task:
       prologue:
         commands:
@@ -98,7 +100,7 @@ blocks:
           commands:
             - bundle exec ruby build.rb -d dockerfiles/golang -t
 
-        - name: Build and push php
+        - name: Build and test php
           commands:
             - bundle exec ruby build.rb -d dockerfiles/php -t
 
