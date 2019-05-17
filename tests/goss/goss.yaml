@@ -78,7 +78,7 @@ command:
 
 {{if getEnv "PACKAGE" | regexMatch "php"}}
 {{$name := .Env.VERSION}}
-{{range .Vars.rust.commands}}
+{{range .Vars.php.commands}}
   {{.}} | grep {{$name}}:
     exit-status: 0
 {{end}}
