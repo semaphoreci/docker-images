@@ -60,3 +60,7 @@ node:
 golang:
   commands:
   - go version
+
+php:
+  commands:
+  - php -v

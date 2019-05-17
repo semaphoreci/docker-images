@@ -49,3 +49,7 @@ blocks:
         - name: Build and push golang
           commands:
             - bundle exec ruby build.rb -d dockerfiles/golang -r
+
+        - name: Build and push php
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/php -r

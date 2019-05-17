@@ -52,6 +52,11 @@ blocks:
           commands:
             - bundle exec ruby build.rb -d dockerfiles/golang
 
+        - name: Build and push php
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/php
+
+
   - name: Test images
     skip:
         when: "branch = 'master' OR tag = '.*'"
@@ -92,6 +97,11 @@ blocks:
         - name: Build and test golang
           commands:
             - bundle exec ruby build.rb -d dockerfiles/golang -t
+
+        - name: Build and push php
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/php -t
+
 
 promotions:
   - name: Rebuild all containers
