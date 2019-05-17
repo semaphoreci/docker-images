@@ -8,7 +8,9 @@ execution_time_limit:
   hours: 3
 
 blocks:
-  - name: Build and push
+  - name: Build test and push to dockerhub
+    skip:
+        when: "branch != 'master' OR tag != '.*'"
     task:
       secrets:
         - name: semaphoreci-dockerhub
@@ -49,6 +51,47 @@ blocks:
         - name: Build and push golang
           commands:
             - bundle exec ruby build.rb -d dockerfiles/golang
+
+  - name: Test images
+    skip:
+        when: "branch = 'master' OR tag = '.*'"
+    task:
+      prologue:
+        commands:
+          - curl -L https://goss.rocks/install | sudo sh
+          - gem install bundler
+          - checkout
+          - cache restore gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock),gems-$SEMAPHORE_GIT_BRANCH-,gems-master-
+          - bundle install --path vendor/bundle
+          - cache store gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock) vendor/bundle
+      jobs:
+        - name: Build and push ruby
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/ruby -t
+
+        - name: Build and push android
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/android -t
+
+        - name: Build and push ubuntu
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/ubuntu -t
+
+        - name: Build and push rust
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/rust -t
+
+        - name: Build and push haskell
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/haskell -t
+
+        - name: Build and push python
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/python -t
+
+        - name: Build and push golang
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/golang -t
 
 promotions:
   - name: Rebuild all containers

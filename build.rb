@@ -39,7 +39,7 @@ class SemaphoreRegistry
     end
   end
 
-  def self.build(dir,rebuild)
+  def self.build(dir,rebuild,test)
     files = Dir.entries(dir).select {|f| !File.directory? f }
     files.each do |f|
       # e.g Dockerfile-golang-1.9
@@ -54,8 +54,10 @@ class SemaphoreRegistry
       self.run("docker build -t semaphoreci/#{repo}:#{tag} -f #{dir}/#{f} #{dir}")
       @logger.info("Running Tests")
       self.run("GOSS_FILES_PATH=tests/goss GOSS_VARS=vars.yaml GOSS_FILES_STRATEGY=cp dgoss run -e PACKAGE=\"#{repo}\" -e VERSION=\"#{version}\" semaphoreci/#{repo}:#{tag} /bin/sleep 3600")
-      @logger.info("Push to Dockerhub")
-      self.run("docker push semaphoreci/#{repo}:#{tag}")
+      if !test
+        @logger.info("Push to Dockerhub")
+        self.run("docker push semaphoreci/#{repo}:#{tag}")
+      end
     end
   end
 
@@ -65,6 +67,7 @@ options = OpenStruct.new
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: %s [options]' % $0
   opts.on('-d', '--dir DIR', 'Dockerfiles dir.') { |o| options[:dir] = o }
+  opts.on('-r', '--test', 'Only test images with dgoss') { |o| options[:test] = o }
   opts.on('-r', '--rebuild', 'Rebuild all images') { |o| options[:rebuild] = o }
   opts.on_tail("-h", "--help", "Show help") do
     puts opts
@@ -84,4 +87,4 @@ rescue OptionParser::ParseError => e
   exit 1
 end
 
-SemaphoreRegistry.build(options[:dir],options[:rebuild])
+SemaphoreRegistry.build(options[:dir],options[:rebuild],options[:test])
