@@ -10,7 +10,7 @@ execution_time_limit:
 blocks:
   - name: Build test and push to dockerhub
     skip:
-        when: "branch != 'master' OR tag != '.*'"
+        when: "branch != 'master'"
     task:
       secrets:
         - name: semaphoreci-dockerhub
