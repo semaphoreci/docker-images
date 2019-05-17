@@ -56,11 +56,8 @@ blocks:
     skip:
         when: "branch = 'master' OR tag = '.*'"
     task:
-      secrets:
-        - name: semaphoreci-dockerhub
       prologue:
         commands:
-          - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
           - curl -L https://goss.rocks/install | sudo sh
           - gem install bundler
           - checkout
