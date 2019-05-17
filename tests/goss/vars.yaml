@@ -35,7 +35,7 @@ android:
 
 ubuntu:
   commands:
-  - lsb_release -a 2>/dev/null | grep Release|awk '{print $2}'|
+  - lsb_release -a 2>/dev/null | grep Release |awk '{print $2}'
 
 ruby:
   commands:
