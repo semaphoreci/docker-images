@@ -75,3 +75,11 @@ command:
     exit-status: 0
 {{end}}
 {{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "php"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.php.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{end}}

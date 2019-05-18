@@ -5,7 +5,7 @@ agent:
     type: e1-standard-8
     os_image: ubuntu1804
 execution_time_limit:
-  hours: 6
+  hours: 12
 
 blocks:
   - name: Build and push
@@ -49,3 +49,7 @@ blocks:
         - name: Build and push golang
           commands:
             - bundle exec ruby build.rb -d dockerfiles/golang -r
+
+        - name: Build and push php
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/php -r
