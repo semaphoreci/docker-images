@@ -2,13 +2,13 @@ version: v1.0
 name: First pipeline example
 agent:
   machine:
-    type: e1-standard-2
+    type: e1-standard-8
     os_image: ubuntu1804
+execution_time_limit:
+  hours: 8
 
 blocks:
   - name: Build test and push to dockerhub
-    execution_time_limit:
-      hours: 8
     skip:
       when: "branch != 'master'"
     task:
@@ -55,55 +55,6 @@ blocks:
         - name: Build and push php
           commands:
             - bundle exec ruby build.rb -d dockerfiles/php
-
-
-  - name: Test images
-    execution_time_limit:
-      hours: 8
-    skip:
-      when: "branch = 'master' OR tag = '.*'"
-    task:
-      prologue:
-        commands:
-          - curl -L https://goss.rocks/install | sudo sh
-          - gem install bundler
-          - checkout
-          - cache restore gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock),gems-$SEMAPHORE_GIT_BRANCH-,gems-master-
-          - bundle install --path vendor/bundle
-          - cache store gems-$SEMAPHORE_GIT_BRANCH-$(checksum Gemfile.lock) vendor/bundle
-      jobs:
-        - name: Build and test ruby
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/ruby -t
-
-        - name: Build and test android
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/android -t
-
-        - name: Build and test ubuntu
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/ubuntu -t
-
-        - name: Build and test rust
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/rust -t
-
-        - name: Build and test haskell
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/haskell -t
-
-        - name: Build and test python
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/python -t
-
-        - name: Build and test golang
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/golang -t
-
-        - name: Build and test php
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/php -t
-
 
 promotions:
   - name: Rebuild all containers
