@@ -99,3 +99,11 @@ command:
     exit-status: 0
 {{end}}
 {{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "^elixir"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.elixir.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{end}}

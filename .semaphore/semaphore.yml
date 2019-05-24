@@ -64,6 +64,10 @@ blocks:
           commands:
             - bundle exec ruby build.rb -d dockerfiles/openjdk
 
+        - name: Build and push elixir
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/elixir
+
 
 promotions:
   - name: Rebuild all containers
