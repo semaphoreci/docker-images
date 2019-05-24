@@ -69,7 +69,7 @@ java:
   commands:
   - java -version 2>&1
 
-java:
+elixir:
   commands:
   - elixir --version
 
