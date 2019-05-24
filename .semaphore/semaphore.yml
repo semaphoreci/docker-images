@@ -56,6 +56,10 @@ blocks:
           commands:
             - bundle exec ruby build.rb -d dockerfiles/php
 
+        - name: Build and push node
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/node
+
 promotions:
   - name: Rebuild all containers
     pipeline_file: "rebuild.yml"
