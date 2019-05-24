@@ -61,3 +61,7 @@ blocks:
         - name: Build and push java/openjdk
           commands:
             - bundle exec ruby build.rb -d dockerfiles/openjdk -r
+
+        - name: Build and push elixir
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/elixir
