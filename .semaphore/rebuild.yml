@@ -53,3 +53,7 @@ blocks:
         - name: Build and push php
           commands:
             - bundle exec ruby build.rb -d dockerfiles/php -r
+
+        - name: Build and push node
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/node -r
