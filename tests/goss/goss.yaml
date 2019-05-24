@@ -91,3 +91,11 @@ command:
     exit-status: 0
 {{end}}
 {{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "^openjdk"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.java.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{end}}

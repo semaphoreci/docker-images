@@ -64,3 +64,8 @@ golang:
 php:
   commands:
   - php -v
+
+java:
+  commands:
+  - java -version
+

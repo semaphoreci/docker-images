@@ -57,3 +57,7 @@ blocks:
         - name: Build and push node
           commands:
             - bundle exec ruby build.rb -d dockerfiles/node -r
+
+        - name: Build and push java/openjdk
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/openjdk -r
