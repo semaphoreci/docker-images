@@ -60,6 +60,11 @@ blocks:
           commands:
             - bundle exec ruby build.rb -d dockerfiles/node
 
+        - name: Build and push java/openjdk
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/openjdk
+
+
 promotions:
   - name: Rebuild all containers
     pipeline_file: "rebuild.yml"
