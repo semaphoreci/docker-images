@@ -84,7 +84,7 @@ command:
 {{end}}
 {{end}}
 
-{{if getEnv "PACKAGE" | regexMatch "node" | regexMatch "^((?!ruby).)*$"}}
+{{if getEnv "PACKAGE" | regexMatch "^node"}}
 {{$name := .Env.VERSION}}
 {{range .Vars.node.commands}}
   {{.}} | grep {{$name}}:
