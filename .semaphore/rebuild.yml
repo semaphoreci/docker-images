@@ -65,3 +65,7 @@ blocks:
         - name: Build and push elixir
           commands:
             - bundle exec ruby build.rb -d dockerfiles/elixir
+
+        - name: Build and push clojure
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/clojure
