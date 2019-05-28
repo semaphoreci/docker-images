@@ -6,12 +6,7 @@ FROM node:11.9.0-stretch-slim
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
 RUN echo 'DPkg::Options "--force-confnew";' >> /etc/apt/apt.conf.d/99semaphore
 RUN echo 'Acquire::Check-Valid-Until no;' >> /etc/apt/apt.conf
-RUN if grep -q jessie /etc/apt/sources.list ;then echo 'deb http://cdn-fastly.deb.debian.org/debian/ jessie main
-deb-src http://cdn-fastly.deb.debian.org/debian/ jessie main
-deb http://security.debian.org/ jessie/updates main
-deb-src http://security.debian.org/ jessie/updates main
-deb http://archive.debian.org/debian jessie-backports main
-deb-src http://archive.debian.org/debian jessie-backports main' > /etc/sources.list;fi
+RUN if grep -q jessie /etc/apt/sources.list ;then echo 'deb http://cdn-fastly.deb.debian.org/debian/ jessie main'>/etc/apt/sources.list; echo 'deb-src http://cdn-fastly.deb.debian.org/debian/ jessie main'>>/etc/apt/sources.list; echo 'deb http://security.debian.org/ jessie/updates main'>>/etc/apt/sources.list;echo 'deb-src http://security.debian.org/ jessie/updates main'>>/etc/apt/sources.list; echo 'deb http://archive.debian.org/debian jessie-backports main'>>/etc/apt/sources.list; echo 'deb-src http://archive.debian.org/debian jessie-backports main'>>/etc/apt/sources.list;fi
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install Packages
