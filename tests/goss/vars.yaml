@@ -73,3 +73,7 @@ elixir:
   commands:
   - elixir --version
 
+lein:
+  commands:
+  - lein version
+
