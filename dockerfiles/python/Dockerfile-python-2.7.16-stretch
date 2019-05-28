@@ -12,7 +12,7 @@ RUN mkdir -p /usr/share/man/man1
 RUN apt-get update
 RUN echo 'Acquire::Check-Valid-Until no;' >> /etc/apt/apt.conf
 RUN if grep -q jessie /etc/apt/sources.list ;then echo 'deb http://cdn-fastly.deb.debian.org/debian/ jessie main'>/etc/apt/sources.list; echo 'deb-src http://cdn-fastly.deb.debian.org/debian/ jessie main'>>/etc/apt/sources.list; echo 'deb http://security.debian.org/ jessie/updates main'>>/etc/apt/sources.list;echo 'deb-src http://security.debian.org/ jessie/updates main'>>/etc/apt/sources.list;fi
-RUN apt-get install -y \
+RUN apt-get install -y -m \
     git \ 
     mercurial \ 
     xvfb \ 
