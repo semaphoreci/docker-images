@@ -68,6 +68,9 @@ blocks:
           commands:
             - bundle exec ruby build.rb -d dockerfiles/elixir
 
+        - name: Build and push clojure
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/clojure
 
 promotions:
   - name: Rebuild all containers

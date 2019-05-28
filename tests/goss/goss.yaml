@@ -107,3 +107,12 @@ command:
     exit-status: 0
 {{end}}
 {{end}}
+
+{{if getEnv "PACKAGE" | regexMatch "^clojure"}}
+{{$name := .Env.VERSION}}
+{{range .Vars.lein.commands}}
+  {{.}} | grep {{$name}}:
+    exit-status: 0
+{{end}}
+{{end}}
+
