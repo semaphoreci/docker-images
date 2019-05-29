@@ -61,9 +61,8 @@ command:
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "golang"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.golang.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}
     exit-status: 0
 {{end}}
 {{end}}
