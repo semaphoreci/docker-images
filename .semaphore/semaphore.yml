@@ -26,6 +26,7 @@ blocks:
       jobs:
         - name: Build and push ruby
           commands:
+            - bundle exec ruby build.rb -d dockerfiles/ruby/latest -r
             - bundle exec ruby build.rb -d dockerfiles/ruby
 
         - name: Build and push android
@@ -38,6 +39,7 @@ blocks:
 
         - name: Build and push rust
           commands:
+            - bundle exec ruby build.rb -d dockerfiles/rust/latest -r
             - bundle exec ruby build.rb -d dockerfiles/rust
 
         - name: Build and push haskell
@@ -46,18 +48,22 @@ blocks:
 
         - name: Build and push python
           commands:
+            - bundle exec ruby build.rb -d dockerfiles/python/latest -r
             - bundle exec ruby build.rb -d dockerfiles/python
 
         - name: Build and push golang
           commands:
+            - bundle exec ruby build.rb -d dockerfiles/golang/latest -r
             - bundle exec ruby build.rb -d dockerfiles/golang
 
         - name: Build and push php
           commands:
+            - bundle exec ruby build.rb -d dockerfiles/php/latest -r
             - bundle exec ruby build.rb -d dockerfiles/php
 
         - name: Build and push node
           commands:
+            - bundle exec ruby build.rb -d dockerfiles/node/latest -r
             - bundle exec ruby build.rb -d dockerfiles/node
 
         - name: Build and push java/openjdk
@@ -66,6 +72,7 @@ blocks:
 
         - name: Build and push elixir
           commands:
+            - bundle exec ruby build.rb -d dockerfiles/elixir/latest -r
             - bundle exec ruby build.rb -d dockerfiles/elixir
 
         - name: Build and push clojure
