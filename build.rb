@@ -58,6 +58,8 @@ class SemaphoreRegistry
         @logger.info("Push to Dockerhub")
         self.run("docker push semaphoreci/#{repo}:#{tag}")
       end
+      @logger.info("Cleanup")
+      self.run("docker system prune -a -f")
     end
   end
 
@@ -67,7 +69,7 @@ options = OpenStruct.new
 parser = OptionParser.new do |opts|
   opts.banner = 'Usage: %s [options]' % $0
   opts.on('-d', '--dir DIR', 'Dockerfiles dir.') { |o| options[:dir] = o }
-  opts.on('-r', '--test', 'Only test images with dgoss') { |o| options[:test] = o }
+  opts.on('-t', '--test', 'Only test images with dgoss') { |o| options[:test] = o }
   opts.on('-r', '--rebuild', 'Rebuild all images') { |o| options[:rebuild] = o }
   opts.on_tail("-h", "--help", "Show help") do
     puts opts
