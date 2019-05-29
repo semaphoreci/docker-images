@@ -1,6 +1,6 @@
 # This file is generated automatically
 
-FROM node:11.10.1-stretch-slim
+FROM clojure:lein-2.9.1
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
