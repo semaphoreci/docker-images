@@ -51,7 +51,7 @@ class SemaphoreRegistry
       next if self.search(repo,tag) && !rebuild
       @logger.info("Rebuilding all Images") if rebuild
       @logger.info("Building #{repo} #{tag}")
-      self.run("docker build -t semaphoreci/#{repo}:#{tag} -f #{dir}/#{f} #{dir}")
+      self.run("docker build -t semaphoreci/#{repo}:#{tag} -f #{f} #{dir}")
       @logger.info("Running Tests")
       self.run("GOSS_FILES_PATH=tests/goss GOSS_VARS=vars.yaml GOSS_FILES_STRATEGY=cp dgoss run -e PACKAGE=\"#{repo}\" semaphoreci/#{repo}:#{tag} /bin/sleep 3600")
       if !test
