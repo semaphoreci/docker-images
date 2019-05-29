@@ -40,8 +40,8 @@ class SemaphoreRegistry
   end
 
   def self.build(dir,rebuild,test)
-    files = Dir.entries(dir).select {|f| !File.directory? f }
-    files.each do |f|
+    Dir["#{dir}/*"].each do |f|
+      next if File.directory?(f)
       # e.g Dockerfile-golang-1.9
       parts = f.split("-")
       repo = parts[1]
@@ -53,7 +53,7 @@ class SemaphoreRegistry
       @logger.info("Building #{repo} #{tag}")
       self.run("docker build -t semaphoreci/#{repo}:#{tag} -f #{dir}/#{f} #{dir}")
       @logger.info("Running Tests")
-      self.run("GOSS_FILES_PATH=tests/goss GOSS_VARS=vars.yaml GOSS_FILES_STRATEGY=cp dgoss run -e PACKAGE=\"#{repo}\" -e VERSION=\"#{version}\" semaphoreci/#{repo}:#{tag} /bin/sleep 3600")
+      self.run("GOSS_FILES_PATH=tests/goss GOSS_VARS=vars.yaml GOSS_FILES_STRATEGY=cp dgoss run -e PACKAGE=\"#{repo}\" semaphoreci/#{repo}:#{tag} /bin/sleep 3600")
       if !test
         @logger.info("Push to Dockerhub")
         self.run("docker push semaphoreci/#{repo}:#{tag}")

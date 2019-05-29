@@ -17,17 +17,15 @@ command:
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "ruby"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.ruby.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "ruby-node"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.ruby.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{range .Vars.node.commands}}
@@ -37,80 +35,71 @@ command:
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "python"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.python.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "rust"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.rust.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "haskell"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.haskell.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "golang"}}
 {{range .Vars.golang.commands}}
-  {{.}}
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "ubuntu"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.rust.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "php"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.php.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "^node"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.node.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "^openjdk"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.java.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "^elixir"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.elixir.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
 
 {{if getEnv "PACKAGE" | regexMatch "^clojure"}}
-{{$name := .Env.VERSION}}
 {{range .Vars.lein.commands}}
-  {{.}} | grep {{$name}}:
+  {{.}}:
     exit-status: 0
 {{end}}
 {{end}}
