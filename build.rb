@@ -48,7 +48,7 @@ class SemaphoreRegistry
       # Get tag from filename - 1.9-node
       version = parts[2]
       tag = parts[2...parts.length].map { |k| k }.join("-")
-      next if !self.search(repo,tag) && !rebuild
+      next if self.search(repo,tag) && !rebuild
       @logger.info("Rebuilding all Images") if rebuild
       @logger.info("Building #{repo} #{tag}")
       self.run("docker build -t semaphoreci/#{repo}:#{tag} -f #{f} #{dir}")
