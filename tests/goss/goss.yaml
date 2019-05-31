@@ -1,6 +1,6 @@
 
 package:
-{{if ne .Env.OS "alpine"}}
+{{if ne .Env.PACKAGE "alpine"}}
 {{range .Vars.common.packages}}
   {{.}}:
     installed: true
@@ -18,7 +18,7 @@ package:
 {{end}}
 {{end}}
 
-{{if ne .Env.OS "alpine"}}
+{{if ne .Env.PACKAGE "alpine"}}
 command:
 {{range .Vars.common.commands}}
   {{.}}:

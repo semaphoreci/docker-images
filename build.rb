@@ -18,10 +18,10 @@ class SemaphoreRegistry
     response = Net::HTTP.get_response(uri)
     if response.is_a?(Net::HTTPSuccess)
       body = JSON.parse(Net::HTTP.get(uri))
-      @logger.info("Image found: Repository: #{name}, Tag: #{body['name']}")
+      @logger.info("Image found: Repository: #{name}, Tag: #{tag}")
       return true
     elsif response.is_a?(Net::HTTPNotFound)
-      @logger.info("Image not found Repository: #{name}, Tag: #{body['name']}")
+      @logger.info("Image not found Repository: #{name}, Tag: #{tag}")
       return false
     else
       @logger.error response
@@ -48,7 +48,7 @@ class SemaphoreRegistry
       # Get tag from filename - 1.9-node
       version = parts[2]
       tag = parts[2...parts.length].map { |k| k }.join("-")
-      next if self.search(repo,tag) && !rebuild
+      next if !self.search(repo,tag) && !rebuild
       @logger.info("Rebuilding all Images") if rebuild
       @logger.info("Building #{repo} #{tag}")
       self.run("docker build -t semaphoreci/#{repo}:#{tag} -f #{f} #{dir}")
