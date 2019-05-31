@@ -1,0 +1,14 @@
+# This file is generated automatically
+
+FROM alpine:3.9
+
+# Install Semaphore Deps
+RUN apk update
+RUN apk add \
+    git \ 
+    lftp \ 
+    openssh-client \ 
+    wget \ 
+    curl \ 
+    bash
+CMD ["/bin/bash"]
