@@ -1,4 +1,6 @@
+
 package:
+{{if ne .Env.OS "alpine"}}
 {{range .Vars.common.packages}}
   {{.}}:
     installed: true
@@ -9,7 +11,14 @@ package:
     installed: true
 {{end}}
 {{end}}
+{{else}}
+{{range .Vars.alpine.packages}}
+  {{.}}:
+    installed: true
+{{end}}
+{{end}}
 
+{{if ne .Env.OS "alpine"}}
 command:
 {{range .Vars.common.commands}}
   {{.}}:
@@ -101,5 +110,6 @@ command:
 {{range .Vars.lein.commands}}
   {{.}}:
     exit-status: 0
+{{end}}
 {{end}}
 {{end}}

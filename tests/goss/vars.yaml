@@ -28,6 +28,13 @@ common:
   - "docker -v"
   - "docker-compose --version"
 
+alpine:
+  packages:
+    - git
+    - bash
+    - lftp
+    - openssh-client
+
 android:
   packages:
   - google-cloud-sdk
@@ -76,4 +83,3 @@ elixir:
 lein:
   commands:
   - lein version
-

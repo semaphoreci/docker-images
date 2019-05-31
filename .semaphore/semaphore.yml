@@ -79,6 +79,11 @@ blocks:
           commands:
             - bundle exec ruby build.rb -d dockerfiles/clojure
 
+        - name: Build and push alpine
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/alpine/latest -r
+            - bundle exec ruby build.rb -d dockerfiles/alpine
+
 promotions:
   - name: Rebuild all containers
     pipeline_file: "rebuild.yml"

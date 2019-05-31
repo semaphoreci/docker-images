@@ -21,7 +21,7 @@ class SemaphoreRegistry
       @logger.info("Image found: Repository: #{name}, Tag: #{body['name']}")
       return true
     elsif response.is_a?(Net::HTTPNotFound)
-      @logger.info("Image not found")
+      @logger.info("Image not found Repository: #{name}, Tag: #{body['name']}")
       return false
     else
       @logger.error response
