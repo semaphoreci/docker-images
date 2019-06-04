@@ -1,0 +1,127 @@
+# This file is generated automatically
+
+FROM node:7.10
+
+# Make APT non-interactive
+RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
+RUN echo 'DPkg::Options "--force-confnew";' >> /etc/apt/apt.conf.d/99semaphore
+RUN echo 'Acquire::Check-Valid-Until no;' >> /etc/apt/apt.conf
+RUN if grep -q jessie /etc/apt/sources.list ;then echo 'deb http://cdn-fastly.deb.debian.org/debian/ jessie main'>/etc/apt/sources.list; echo 'deb-src http://cdn-fastly.deb.debian.org/debian/ jessie main'>>/etc/apt/sources.list; echo 'deb http://security.debian.org/ jessie/updates main'>>/etc/apt/sources.list;echo 'deb-src http://security.debian.org/ jessie/updates main'>>/etc/apt/sources.list; echo 'deb http://archive.debian.org/debian jessie-backports main'>>/etc/apt/sources.list; echo 'deb-src http://archive.debian.org/debian jessie-backports main'>>/etc/apt/sources.list;fi
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install Packages
+RUN mkdir -p /usr/share/man/man1
+RUN apt-get update
+RUN apt-get install -y \
+    git \ 
+    mercurial \ 
+    xvfb \ 
+    vim \ 
+    apt \ 
+    locales \ 
+    sudo \ 
+    apt-transport-https \ 
+    ca-certificates \ 
+    openssh-client \ 
+    software-properties-common \ 
+    build-essential \ 
+    tar \ 
+    lsb-core \ 
+    lsb-release \ 
+    gzip \ 
+    parallel \ 
+    net-tools \ 
+    netcat \ 
+    unzip \ 
+    zip \ 
+    bzip2 \ 
+    lftp \ 
+    gnupg \ 
+    curl \ 
+    wget \ 
+    jq \ 
+    tree
+RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
+RUN locale-gen C.UTF-8 || true
+ENV LANG=C.UTF-8
+
+# Install Docker
+ENV DOCKER_COMPOSE=1.23.2
+RUN set -ex \
+    && export DOCKER_VERSION=$(curl --silent --fail --retry 3 https://download.docker.com/linux/static/stable/x86_64/ | grep -o -e 'docker-[.0-9]*\.tgz' | sort -r | head -n 1) \ 
+    && DOCKER_URL="https://download.docker.com/linux/static/stable/x86_64/${DOCKER_VERSION}" \ 
+    && echo Docker URL: $DOCKER_URL \ 
+    && curl --silent --show-error --location --fail --retry 3 --output /tmp/docker.tgz "${DOCKER_URL}" \ 
+    && ls -lha /tmp/docker.tgz \ 
+    && tar -xz -C /tmp -f /tmp/docker.tgz \ 
+    && mv /tmp/docker/* /usr/bin \ 
+    && rm -rf /tmp/docker /tmp/docker.tgz \ 
+    && which docker \ 
+    && (docker version || true)
+
+# Install Compose
+RUN wget -q \
+    https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE}/docker-compose-`uname -s`-`uname -m` -O /usr/local/bin/docker-compose \ 
+    && chmod +x /usr/local/bin/docker-compose \ 
+    && docker-compose --version
+
+# Entrypoint
+CMD ["/bin/sh"]
+
+# Install Java
+RUN apt-get update && apt-get install -y jq openjdk-8-jre openjdk-8-jre-headless openjdk-8-jdk openjdk-8-jdk-headless
+
+# Create Semaphore user
+RUN groupadd --gid 8592 semaphore
+RUN useradd --uid 8592 --gid semaphore --shell /bin/bash --create-home semaphore
+RUN echo 'semaphore ALL=NOPASSWD: ALL' >> /etc/sudoers.d/99-semaphore
+RUN echo 'Defaults    env_keep += "DEBIAN_FRONTEND"' >> /etc/sudoers.d/env_keep
+
+# Set User
+USER semaphore
+
+# Install firefox
+RUN FIREFOX_URL="https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" \
+    && ACTUAL_URL=$(curl -Ls -o /dev/null -w %{url_effective} $FIREFOX_URL) \ 
+    && curl --silent --show-error --location --fail --retry 3 --output /tmp/firefox.tar.bz2 $ACTUAL_URL \ 
+    && sudo tar -xvjf /tmp/firefox.tar.bz2 -C /opt \ 
+    && sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox \ 
+    && sudo apt-get install -y libgtk3.0-cil-dev libasound2 libasound2 libdbus-glib-1-2 libdbus-1-3 \ 
+    && rm -rf /tmp/firefox.* \ 
+    && firefox --version
+
+# Install geckodriver
+RUN export GECKODRIVER_LATEST_RELEASE_URL=$(curl https://api.github.com/repos/mozilla/geckodriver/releases/latest | jq -r ".assets[] | select(.name | test(\"linux64\")) | .browser_download_url") \
+    && curl --silent --show-error --location --fail --retry 3 --output /tmp/geckodriver_linux64.tar.gz "$GECKODRIVER_LATEST_RELEASE_URL" \ 
+    && cd /tmp \ 
+    && tar xf geckodriver_linux64.tar.gz \ 
+    && rm -rf geckodriver_linux64.tar.gz \ 
+    && sudo mv geckodriver /usr/local/bin/geckodriver \ 
+    && sudo chmod +x /usr/local/bin/geckodriver \ 
+    && geckodriver --version
+
+# Install Chrome
+RUN curl --silent --show-error --location --fail --retry 3 --output /tmp/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+    && (sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb || sudo apt-get -fy install) \ 
+    && rm -rf /tmp/google-chrome-stable_current_amd64.deb \ 
+    && sudo sed -i 's|HERE/chrome"|HERE/chrome" --disable-setuid-sandbox --no-sandbox|g' /opt/google/chrome/google-chrome \ 
+    && google-chrome --version
+RUN CHROME_VERSION="$(google-chrome --version)" \
+    && export CHROMEDRIVER_RELEASE="$(echo $CHROME_VERSION | sed 's/^Google Chrome //')" \ 
+    && export CHROMEDRIVER_RELEASE=${CHROMEDRIVER_RELEASE%%.*} \ 
+    && CHROMEDRIVER_VERSION=$(curl --location --fail --retry 3 http://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROMEDRIVER_RELEASE}) \ 
+    && curl --silent --show-error --location --fail --retry 3 --output /tmp/chromedriver_linux64.zip "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip" \ 
+    && cd /tmp \ 
+    && unzip chromedriver_linux64.zip \ 
+    && rm -rf chromedriver_linux64.zip \ 
+    && sudo mv chromedriver /usr/local/bin/chromedriver \ 
+    && sudo chmod +x /usr/local/bin/chromedriver \ 
+    && chromedriver --version
+
+# start xvfb automatically
+ENV DISPLAY :99
+RUN printf '#!/bin/sh\nXvfb :99 -screen 0 1280x1024x24 &\nexec "$@"\n' > /tmp/entrypoint
+RUN chmod +x /tmp/entrypoint
+RUN sudo mv /tmp/entrypoint /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["/bin/sh"]
