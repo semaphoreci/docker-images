@@ -1,6 +1,6 @@
 # This file is generated automatically
 
-FROM ruby:2.6
+FROM semaphoreci/ruby:2.6
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore

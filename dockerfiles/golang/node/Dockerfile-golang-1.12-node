@@ -1,6 +1,6 @@
 # This file is generated automatically
 
-FROM golang:1.12
+FROM semaphoreci/golang:1.12
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore

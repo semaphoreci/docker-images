@@ -1,6 +1,6 @@
 # This file is generated automatically
 
-FROM python:3.4
+FROM semaphoreci/python:3.4
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
