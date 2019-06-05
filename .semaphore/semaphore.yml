@@ -74,9 +74,15 @@ blocks:
 
         - name: Build and push node
           commands:
-            - bundle exec ruby build.rb -d dockerfiles/node/latest -r
-            - bundle exec ruby build.rb -d dockerfiles/node/browser -r
             - bundle exec ruby build.rb -d dockerfiles/node
+
+        - name: Build and push node latest
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/node/latest -r
+
+        - name: Build and push node plus browser
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/node/browser -r
 
         - name: Build and push java/openjdk
           commands:
