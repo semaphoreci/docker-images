@@ -27,9 +27,13 @@ blocks:
         - name: Build and push ruby
           commands:
             - bundle exec ruby build.rb -d dockerfiles/ruby/latest -r
-            - bundle exec ruby build.rb -d dockerfiles/ruby/node -r
             - bundle exec ruby build.rb -d dockerfiles/ruby/browser -r
             - bundle exec ruby build.rb -d dockerfiles/ruby
+
+        - name: Build and push ruby with node and browsers
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/ruby/node -r
+            - bundle exec ruby build.rb -d dockerfiles/ruby/node-browser -r
 
         - name: Build and push android
           commands:
@@ -44,6 +48,7 @@ blocks:
             - bundle exec ruby build.rb -d dockerfiles/rust/latest -r
             - bundle exec ruby build.rb -d dockerfiles/rust/node -r
             - bundle exec ruby build.rb -d dockerfiles/rust/browser -r
+            - bundle exec ruby build.rb -d dockerfiles/rust/node-browser -r
             - bundle exec ruby build.rb -d dockerfiles/rust
 
         - name: Build and push haskell
@@ -54,23 +59,32 @@ blocks:
         - name: Build and push python
           commands:
             - bundle exec ruby build.rb -d dockerfiles/python/latest -r
-            - bundle exec ruby build.rb -d dockerfiles/python/node -r
             - bundle exec ruby build.rb -d dockerfiles/python/browser -r
             - bundle exec ruby build.rb -d dockerfiles/python
+
+        - name: Build and push python with node and browsers
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/python/node -r
+            - bundle exec ruby build.rb -d dockerfiles/python/node-browser -r
 
         - name: Build and push golang
           commands:
             - bundle exec ruby build.rb -d dockerfiles/golang/latest -r
             - bundle exec ruby build.rb -d dockerfiles/golang/node -r
+            - bundle exec ruby build.rb -d dockerfiles/golang/node-browser -r
             - bundle exec ruby build.rb -d dockerfiles/golang/browser -r
             - bundle exec ruby build.rb -d dockerfiles/golang
 
         - name: Build and push php
           commands:
             - bundle exec ruby build.rb -d dockerfiles/php/latest -r
-            - bundle exec ruby build.rb -d dockerfiles/php/node -r
             - bundle exec ruby build.rb -d dockerfiles/php/browser -r
             - bundle exec ruby build.rb -d dockerfiles/php
+
+        - name: Build and push php with node and browsers
+          commands:
+            - bundle exec ruby build.rb -d dockerfiles/php/node -r
+            - bundle exec ruby build.rb -d dockerfiles/php/node-browser -r
 
         - name: Build and push node
           commands:
