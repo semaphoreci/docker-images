@@ -1,6 +1,6 @@
 # This file is generated automatically
 
-FROM semaphoreci/php:7.1
+FROM node:12.4.0
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
@@ -67,7 +67,3 @@ RUN wget -q \
 
 # Entrypoint
 CMD ["/bin/sh"]
-
-# Install NodeJS
-RUN curl -o- https://deb.nodesource.com/setup_10.x | bash \
-    && apt-get install -y nodejs

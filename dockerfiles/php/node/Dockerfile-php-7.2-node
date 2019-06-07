@@ -1,6 +1,6 @@
 # This file is generated automatically
 
-FROM php:7.2
+FROM semaphoreci/php:7.2
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
