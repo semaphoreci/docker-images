@@ -44,7 +44,6 @@ class SemaphoreRegistry
       next if File.directory?(f)
       # e.g Dockerfile-golang-1.9
       parts = File.basename(f).split("-")
-      puts parts
       repo = parts[1]
       # Get tag from filename - 1.9-node
       version = parts[2]
