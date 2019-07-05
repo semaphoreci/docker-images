@@ -99,6 +99,8 @@ blocks:
         - name: Build and push elixir
           commands:
             - bundle exec ruby build.rb -d dockerfiles/elixir/latest -r
+            - bundle exec ruby build.rb -d dockerfiles/elixir/node -r
+            - bundle exec ruby build.rb -d dockerfiles/elixir/node-browsers -r
             - bundle exec ruby build.rb -d dockerfiles/elixir
 
         - name: Build and push clojure
