@@ -26,7 +26,6 @@ RUN apt-get install -y \
     software-properties-common \ 
     build-essential \ 
     tar \ 
-    lsb-core \ 
     lsb-release \ 
     gzip \ 
     parallel \ 
