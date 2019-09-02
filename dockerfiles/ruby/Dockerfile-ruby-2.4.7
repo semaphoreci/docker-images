@@ -1,6 +1,6 @@
 # This file is generated automatically
 
-FROM openjdk:11.0.1-jre-slim-stretch
+FROM ruby:2.4.7
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
