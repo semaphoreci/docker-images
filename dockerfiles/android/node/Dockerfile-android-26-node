@@ -1,6 +1,6 @@
 # This file is generated automatically
 
-FROM semaphoreci/ubuntu:26
+FROM semaphoreci/android:26
 
 # Install NodeJS
 RUN curl -o- https://deb.nodesource.com/setup_10.x | bash \
