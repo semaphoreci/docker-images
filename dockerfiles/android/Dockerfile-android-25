@@ -85,6 +85,20 @@ RUN apt-get purge maven maven2 \
     && mvn --version \ 
     && gradle -v
 
+# Download Ruby
+RUN apt-get update \
+    && cd /tmp && wget -O ruby-install-0.6.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.1.tar.gz \ 
+    && tar -xzvf ruby-install-0.6.1.tar.gz \ 
+    && cd ruby-install-0.6.1 \ 
+    && make install \ 
+    && ruby-install --cleanup ruby 2.6.1 \ 
+    && rm -r /tmp/ruby-install-* \ 
+    && rm -rf /var/lib/apt/lists/*
+
+# Configure Ruby
+ENV PATH /opt/rubies/ruby-2.6.1/bin:${PATH}
+RUN echo 'gem: --env-shebang --no-rdoc --no-ri' >> ~/.gemrc && gem install bundler
+
 # Download Android SDK
 RUN cd /opt \
     && wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk-tools.zip \ 
