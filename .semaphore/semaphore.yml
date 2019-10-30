@@ -37,8 +37,8 @@ blocks:
 
         - name: Build and push android
           commands:
-            - bundle exec ruby build.rb -d dockerfiles/android
-            - bundle exec ruby build.rb -d dockerfiles/android/node
+            - bundle exec ruby build.rb -d dockerfiles/android -r
+            - bundle exec ruby build.rb -d dockerfiles/android/node -r
 
         - name: Build and push ubuntu
           commands:
