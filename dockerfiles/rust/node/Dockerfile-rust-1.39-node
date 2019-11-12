@@ -1,0 +1,7 @@
+# This file is generated automatically
+
+FROM semaphoreci/rust:1.39
+
+# Install NodeJS
+RUN curl -o- https://deb.nodesource.com/setup_10.x | bash \
+    && apt-get install -y nodejs
