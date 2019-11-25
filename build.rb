@@ -21,6 +21,7 @@ class SemaphoreRegistry
       return true
     elsif response.is_a?(Net::HTTPNotFound)
       @logger.info("Image not found Repository: #{name}, Tag: #{tag}")
+      File.open("#{name}_new_images", "a") {|f| f.write("semaphoreci/#{name}:#{tag}") }
       return false
     else
       @logger.error response
@@ -54,9 +55,9 @@ class SemaphoreRegistry
       unless test
         @logger.info('Push to Dockerhub')
         run("docker push semaphoreci/#{repo}:#{tag}")
+        @logger.info('Cleanup')
+        run('docker system prune -a -f')
       end
-      @logger.info('Cleanup')
-      run('docker system prune -a -f')
     end
   end
 end

@@ -9,8 +9,6 @@ execution_time_limit:
 
 blocks:
   - name: Build test and push to dockerhub
-    skip:
-      when: "branch != 'master'"
     task:
       secrets:
         - name: semaphoreci-dockerhub
@@ -28,70 +26,65 @@ blocks:
           commands:
             - bundle exec ruby build.rb -d dockerfiles/ruby/latest -r
             - bundle exec ruby build.rb -d dockerfiles/ruby
-
-        - name: Build and push ruby with node and browsers
-          commands:
             - bundle exec ruby build.rb -d dockerfiles/ruby/node -r
             - bundle exec ruby build.rb -d dockerfiles/ruby/browsers
             - bundle exec ruby build.rb -d dockerfiles/ruby/node-browsers
+            - artifact push project ruby_new_images || true
 
         - name: Build and push android
           commands:
             - bundle exec ruby build.rb -d dockerfiles/android -r
             - bundle exec ruby build.rb -d dockerfiles/android/node -r
-
-        - name: Build and push ubuntu
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/ubuntu
+            - artifact push project android_new_images || true
 
         - name: Build and push rust
           commands:
             - bundle exec ruby build.rb -d dockerfiles/rust/latest -r
             - bundle exec ruby build.rb -d dockerfiles/rust/node -r
             - bundle exec ruby build.rb -d dockerfiles/rust/browsers
-            - bundle exec ruby build.rb -d dockerfiles/rust/node-browsers
+            - bundle exec ruby build.rb -d dockerfiles/rust/node-browsers -r
             - bundle exec ruby build.rb -d dockerfiles/rust
+            - artifact push project rust_new_images || true
 
         - name: Build and push haskell
           commands:
             - bundle exec ruby build.rb -d dockerfiles/haskell/latest -r
             - bundle exec ruby build.rb -d dockerfiles/haskell
+            - artifact push project haskell_new_images || true
 
         - name: Build and push python
           commands:
             - bundle exec ruby build.rb -d dockerfiles/python/latest -r
             - bundle exec ruby build.rb -d dockerfiles/python
-
-        - name: Build and push python with node and browsers
-          commands:
             - bundle exec ruby build.rb -d dockerfiles/python/node -r
-            - bundle exec ruby build.rb -d dockerfiles/python/browsers
-            - bundle exec ruby build.rb -d dockerfiles/python/node-browsers
+            - bundle exec ruby build.rb -d dockerfiles/python/browsers -r
+            - bundle exec ruby build.rb -d dockerfiles/python/node-browsers -r
+            - artifact push project python_new_images || true
 
         - name: Build and push golang
           commands:
             - bundle exec ruby build.rb -d dockerfiles/golang/latest -r
             - bundle exec ruby build.rb -d dockerfiles/golang/node -r
-            - bundle exec ruby build.rb -d dockerfiles/golang/node-browsers
-            - bundle exec ruby build.rb -d dockerfiles/golang/browsers
+            - bundle exec ruby build.rb -d dockerfiles/golang/node-browsers -r
+            - bundle exec ruby build.rb -d dockerfiles/golang/browsers -r
             - bundle exec ruby build.rb -d dockerfiles/golang
+            - artifact push project golang_new_images || true
 
         - name: Build and push php
           commands:
             - bundle exec ruby build.rb -d dockerfiles/php/latest -r
-            - bundle exec ruby build.rb -d dockerfiles/php/browsers
+            - bundle exec ruby build.rb -d dockerfiles/php/browsers -r
             - bundle exec ruby build.rb -d dockerfiles/php
+            - bundle exec ruby build.rb -d dockerfiles/php/node -r
+            - bundle exec ruby build.rb -d dockerfiles/php/node-browsers -r
+            - artifact push project php_new_images || true
 
         - name: Build and push php with node and browsers
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/php/node -r
-            - bundle exec ruby build.rb -d dockerfiles/php/node-browsers
-
-        - name: Build and push node
           commands:
             - bundle exec ruby build.rb -d dockerfiles/node/latest -r
             - bundle exec ruby build.rb -d dockerfiles/node/browsers
             - bundle exec ruby build.rb -d dockerfiles/node
+            - artifact push project node_new_images || true
 
         - name: Build and push java/openjdk
           commands:
@@ -103,12 +96,9 @@ blocks:
             - bundle exec ruby build.rb -d dockerfiles/elixir/node -r
             - bundle exec ruby build.rb -d dockerfiles/elixir/node-browsers
             - bundle exec ruby build.rb -d dockerfiles/elixir
+            - artifact push project elixir_new_images || true
 
         - name: Build and push clojure
           commands:
             - bundle exec ruby build.rb -d dockerfiles/clojure
-
-        - name: Build and push alpine
-          commands:
-            - bundle exec ruby build.rb -d dockerfiles/alpine/latest -r
-            - bundle exec ruby build.rb -d dockerfiles/alpine
+            - artifact push project clojure_new_images || true
