@@ -7,6 +7,10 @@ agent:
 execution_time_limit:
   hours: 10
 
+fail_fast:
+  stop:
+    when: "true"
+
 blocks:
   - name: Build test and push to dockerhub
     task:
