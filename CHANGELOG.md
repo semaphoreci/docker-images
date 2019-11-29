@@ -1,0 +1,137 @@
+Docker repository update Fri Nov 29 15:42:59 UTC 2019
+-----------------------------------
+
+
+IMAGE NAME: semaphoreci/python:3.7.5, ALIASES: 3.7
+IMAGE NAME: semaphoreci/python:3.8.0, ALIASES: 3.8 3 latest
+IMAGE NAME: semaphoreci/python:3.6.9, ALIASES: 3.6
+IMAGE NAME: semaphoreci/python:3.5.9, ALIASES: 3.5
+IMAGE NAME: semaphoreci/python:2.7.17, ALIASES: 2.7 2
+IMAGE NAME: semaphoreci/python:3.7.5-node, ALIASES: 3.7-node
+IMAGE NAME: semaphoreci/python:3.8.0-node, ALIASES: 3.8-node 3-node latest-node
+IMAGE NAME: semaphoreci/python:3.6.9-node, ALIASES: 3.6-node
+IMAGE NAME: semaphoreci/python:3.5.9-node, ALIASES: 3.5-node
+IMAGE NAME: semaphoreci/python:2.7.17-node, ALIASES: 2.7-node 2-node
+IMAGE NAME: semaphoreci/python:3.8.0-buster, ALIASES: 3.8-buster 3-buster buster
+IMAGE NAME: semaphoreci/python:3.7.5-buster, ALIASES: 3.7-buster
+IMAGE NAME: semaphoreci/python:3.6.9-buster, ALIASES: 3.6-buster
+IMAGE NAME: semaphoreci/python:3.5.9-buster, ALIASES: 3.5-buster
+IMAGE NAME: semaphoreci/python:3.6.9-stretch, ALIASES: 3.6-stretch
+IMAGE NAME: semaphoreci/python:3.7.5-stretch, ALIASES: 3.7-stretch
+IMAGE NAME: semaphoreci/python:2.7.17-buster, ALIASES: 2.7-buster 2-buster
+IMAGE NAME: semaphoreci/python:3.5.9-stretch, ALIASES: 3.5-stretch
+IMAGE NAME: semaphoreci/python:2.7.17-stretch, ALIASES: 2.7-stretch 2-stretch
+IMAGE NAME: semaphoreci/python:3.7.5-browsers, ALIASES: 3.7-browsers
+IMAGE NAME: semaphoreci/python:3.8.0-browsers, ALIASES: 3.8-browsers 3-browsers latest-browsers
+IMAGE NAME: semaphoreci/python:3.6.9-browsers, ALIASES: 3.6-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-browsers, ALIASES: 3.5-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-browsers, ALIASES: 2.7-browsers 2-browsers
+IMAGE NAME: semaphoreci/python:3.8.0-buster-node, ALIASES: 3.8-buster-node 3-buster-node buster-node
+IMAGE NAME: semaphoreci/python:3.7.5-buster-node, ALIASES: 3.7-buster-node
+IMAGE NAME: semaphoreci/python:3.6.9-buster-node, ALIASES: 3.6-buster-node
+IMAGE NAME: semaphoreci/python:3.5.9-buster-node, ALIASES: 3.5-buster-node
+IMAGE NAME: semaphoreci/python:3.6.9-stretch-node, ALIASES: 3.6-stretch-node
+IMAGE NAME: semaphoreci/python:3.7.5-stretch-node, ALIASES: 3.7-stretch-node
+IMAGE NAME: semaphoreci/python:2.7.17-buster-node, ALIASES: 2.7-buster-node 2-buster-node
+IMAGE NAME: semaphoreci/python:3.5.9-stretch-node, ALIASES: 3.5-stretch-node
+IMAGE NAME: semaphoreci/python:2.7.17-stretch-node, ALIASES: 2.7-stretch-node 2-stretch-node
+IMAGE NAME: semaphoreci/python:3.7.5-node-browsers, ALIASES: 3.7-node-browsers
+IMAGE NAME: semaphoreci/python:3.8.0-node-browsers, ALIASES: 3.8-node-browsers 3-node-browsers latest-node-browsers
+IMAGE NAME: semaphoreci/python:3.6.9-node-browsers, ALIASES: 3.6-node-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-node-browsers, ALIASES: 3.5-node-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-node-browsers, ALIASES: 2.7-node-browsers 2-node-browsers
+IMAGE NAME: semaphoreci/python:3.8.0-buster-browsers, ALIASES: 3.8-buster-browsers 3-buster-browsers buster-browsers
+IMAGE NAME: semaphoreci/python:3.7.5-buster-browsers, ALIASES: 3.7-buster-browsers
+IMAGE NAME: semaphoreci/python:3.6.9-buster-browsers, ALIASES: 3.6-buster-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-buster-browsers, ALIASES: 3.5-buster-browsers
+IMAGE NAME: semaphoreci/python:3.6.9-stretch-browsers, ALIASES: 3.6-stretch-browsers
+IMAGE NAME: semaphoreci/python:3.7.5-stretch-browsers, ALIASES: 3.7-stretch-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-buster-browsers, ALIASES: 2.7-buster-browsers 2-buster-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-stretch-browsers, ALIASES: 3.5-stretch-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-stretch-browsers, ALIASES: 2.7-stretch-browsers 2-stretch-browsers
+IMAGE NAME: semaphoreci/python:3.8.0-buster-node-browsers, ALIASES: 3.8-buster-node-browsers 3-buster-node-browsers buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.7.5-buster-node-browsers, ALIASES: 3.7-buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.6.9-buster-node-browsers, ALIASES: 3.6-buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-buster-node-browsers, ALIASES: 3.5-buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.6.9-stretch-node-browsers, ALIASES: 3.6-stretch-node-browsers
+IMAGE NAME: semaphoreci/python:3.7.5-stretch-node-browsers, ALIASES: 3.7-stretch-node-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-buster-node-browsers, ALIASES: 2.7-buster-node-browsers 2-buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-stretch-node-browsers, ALIASES: 3.5-stretch-node-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-stretch-node-browsers, ALIASES: 2.7-stretch-node-browsers 2-stretch-node-browsers
+IMAGE NAME: semaphoreci/node:8.16.2-buster, ALIASES: 8.16-buster 8-buster carbon-buster
+IMAGE NAME: semaphoreci/node:13.2.0-buster, ALIASES: 13.2-buster 13-buster buster
+IMAGE NAME: semaphoreci/node:12.13.1-buster, ALIASES: 12.13-buster 12-buster erbium-buster lts-buster current-buster
+IMAGE NAME: semaphoreci/node:10.17.0-buster, ALIASES: 10.17-buster 10-buster dubnium-buster
+IMAGE NAME: semaphoreci/node:8.16.2-stretch, ALIASES: 8.16-stretch 8-stretch carbon-stretch 8.16.2 8.16 8 carbon
+IMAGE NAME: semaphoreci/node:13.2.0-stretch, ALIASES: 13.2-stretch 13-stretch stretch 13.2.0 13.2 13 latest
+IMAGE NAME: semaphoreci/node:10.17.0-stretch, ALIASES: 10.17-stretch 10-stretch dubnium-stretch 10.17.0 10.17 10 dubnium
+IMAGE NAME: semaphoreci/node:12.13.1-stretch, ALIASES: 12.13-stretch 12-stretch erbium-stretch lts-stretch current-stretch 12.13.1 12.13 12 erbium lts current
+IMAGE NAME: semaphoreci/node:8.16.2-buster-browsers, ALIASES: 8.16-buster-browsers 8-buster-browsers carbon-buster-browsers
+IMAGE NAME: semaphoreci/node:13.2.0-buster-browsers, ALIASES: 13.2-buster-browsers 13-buster-browsers buster-browsers
+IMAGE NAME: semaphoreci/node:12.13.1-buster-browsers, ALIASES: 12.13-buster-browsers 12-buster-browsers erbium-buster-browsers lts-buster-browsers current-buster-browsers
+IMAGE NAME: semaphoreci/node:10.17.0-buster-browsers, ALIASES: 10.17-buster-browsers 10-buster-browsers dubnium-buster-browsers
+IMAGE NAME: semaphoreci/node:8.16.2-stretch-browsers, ALIASES: 8.16-stretch-browsers 8-stretch-browsers carbon-stretch-browsers 8.16.2-browsers 8.16-browsers 8-browsers carbon-browsers
+IMAGE NAME: semaphoreci/node:13.2.0-stretch-browsers, ALIASES: 13.2-stretch-browsers 13-stretch-browsers stretch-browsers 13.2.0-browsers 13.2-browsers 13-browsers latest-browsers
+IMAGE NAME: semaphoreci/node:10.17.0-stretch-browsers, ALIASES: 10.17-stretch-browsers 10-stretch-browsers dubnium-stretch-browsers 10.17.0-browsers 10.17-browsers 10-browsers dubnium-browsers
+IMAGE NAME: semaphoreci/node:12.13.1-stretch-browsers, ALIASES: 12.13-stretch-browsers 12-stretch-browsers erbium-stretch-browsers lts-stretch-browsers current-stretch-browsers 12.13.1-browsers 12.13-browsers 12-browsers erbium-browsers lts-browsers current-browsers
+IMAGE NAME: semaphoreci/elixir:1.7.4, ALIASES: 1.7
+IMAGE NAME: semaphoreci/elixir:1.6.6, ALIASES: 1.6
+IMAGE NAME: semaphoreci/elixir:1.5.3, ALIASES: 1.5
+IMAGE NAME: semaphoreci/elixir:1.8.2, ALIASES: 1.8
+IMAGE NAME: semaphoreci/elixir:1.4.5, ALIASES: 1.4
+IMAGE NAME: semaphoreci/elixir:1.9.4, ALIASES: 1.9 latest
+IMAGE NAME: semaphoreci/elixir:1.7.4-node, ALIASES: 1.7-node
+IMAGE NAME: semaphoreci/elixir:1.6.6-node, ALIASES: 1.6-node
+IMAGE NAME: semaphoreci/elixir:1.5.3-node, ALIASES: 1.5-node
+IMAGE NAME: semaphoreci/elixir:1.8.2-node, ALIASES: 1.8-node
+IMAGE NAME: semaphoreci/elixir:1.4.5-node, ALIASES: 1.4-node
+IMAGE NAME: semaphoreci/elixir:1.9.4-node, ALIASES: 1.9-node latest-node
+IMAGE NAME: semaphoreci/elixir:1.6.6-otp-21, ALIASES: 1.6-otp-21
+IMAGE NAME: semaphoreci/elixir:1.8.2-otp-22, ALIASES: 1.8-otp-22
+IMAGE NAME: semaphoreci/elixir:1.7.4-browsers, ALIASES: 1.7-browsers
+IMAGE NAME: semaphoreci/elixir:1.6.6-browsers, ALIASES: 1.6-browsers
+IMAGE NAME: semaphoreci/elixir:1.5.3-browsers, ALIASES: 1.5-browsers
+IMAGE NAME: semaphoreci/elixir:1.8.2-browsers, ALIASES: 1.8-browsers
+IMAGE NAME: semaphoreci/elixir:1.4.5-browsers, ALIASES: 1.4-browsers
+IMAGE NAME: semaphoreci/elixir:1.9.4-browsers, ALIASES: 1.9-browsers latest-browsers
+IMAGE NAME: semaphoreci/elixir:1.6.6-otp-21-node, ALIASES: 1.6-otp-21-node
+IMAGE NAME: semaphoreci/elixir:1.8.2-otp-22-node, ALIASES: 1.8-otp-22-node
+IMAGE NAME: semaphoreci/elixir:1.6.6-otp-21-browsers, ALIASES: 1.6-otp-21-browsers
+IMAGE NAME: semaphoreci/elixir:1.8.2-otp-22-browsers, ALIASES: 1.8-otp-22-browsers
+IMAGE NAME: semaphoreci/erlang:22.1.8, ALIASES: 22.1 22 latest
+IMAGE NAME: semaphoreci/erlang:18.3.4.11, ALIASES: 18.3.4 18.3 18
+IMAGE NAME: semaphoreci/erlang:19.3.6.13, ALIASES: 19.3.6 19.3 19
+IMAGE NAME: semaphoreci/erlang:20.3.8.24, ALIASES: 20.3.8 20.3 20
+IMAGE NAME: semaphoreci/erlang:21.3.8.11, ALIASES: 21.3.8 21.3 21
+IMAGE NAME: semaphoreci/golang:1.13.4, ALIASES: 1.13 1 latest
+IMAGE NAME: semaphoreci/golang:1.12.13, ALIASES: 1.12
+IMAGE NAME: semaphoreci/golang:1.13.4-node, ALIASES: 1.13-node 1-node latest-node
+IMAGE NAME: semaphoreci/golang:1.12.13-node, ALIASES: 1.12-node
+IMAGE NAME: semaphoreci/golang:1.13.4-buster, ALIASES: 1.13-buster 1-buster buster
+IMAGE NAME: semaphoreci/golang:1.13.4-stretch, ALIASES: 1.13-stretch 1-stretch stretch
+IMAGE NAME: semaphoreci/golang:1.12.13-buster, ALIASES: 1.12-buster
+IMAGE NAME: semaphoreci/golang:1.13.4-browsers, ALIASES: 1.13-browsers 1-browsers latest-browsers
+IMAGE NAME: semaphoreci/golang:1.12.13-stretch, ALIASES: 1.12-stretch
+IMAGE NAME: semaphoreci/golang:1.12.13-browsers, ALIASES: 1.12-browsers
+IMAGE NAME: semaphoreci/golang:1.13.4-buster-node, ALIASES: 1.13-buster-node 1-buster-node buster-node
+IMAGE NAME: semaphoreci/golang:1.13.4-stretch-node, ALIASES: 1.13-stretch-node 1-stretch-node stretch-node
+IMAGE NAME: semaphoreci/golang:1.12.13-buster-node, ALIASES: 1.12-buster-node
+IMAGE NAME: semaphoreci/golang:1.13.4-node-browsers, ALIASES: 1.13-node-browsers 1-node-browsers latest-node-browsers
+IMAGE NAME: semaphoreci/golang:1.12.13-stretch-node, ALIASES: 1.12-stretch-node
+IMAGE NAME: semaphoreci/golang:1.12.13-node-browsers, ALIASES: 1.12-node-browsers
+IMAGE NAME: semaphoreci/golang:1.13.4-buster-browsers, ALIASES: 1.13-buster-browsers 1-buster-browsers buster-browsers
+IMAGE NAME: semaphoreci/golang:1.13.4-stretch-browsers, ALIASES: 1.13-stretch-browsers 1-stretch-browsers stretch-browsers
+IMAGE NAME: semaphoreci/golang:1.12.13-buster-browsers, ALIASES: 1.12-buster-browsers
+IMAGE NAME: semaphoreci/golang:1.12.13-stretch-browsers, ALIASES: 1.12-stretch-browsers
+IMAGE NAME: semaphoreci/golang:1.13.4-buster-node-browsers, ALIASES: 1.13-buster-node-browsers 1-buster-node-browsers buster-node-browsers
+IMAGE NAME: semaphoreci/golang:1.13.4-stretch-node-browsers, ALIASES: 1.13-stretch-node-browsers 1-stretch-node-browsers stretch-node-browsers
+IMAGE NAME: semaphoreci/golang:1.12.13-buster-node-browsers, ALIASES: 1.12-buster-node-browsers
+IMAGE NAME: semaphoreci/golang:1.12.13-stretch-node-browsers, ALIASES: 1.12-stretch-node-browsers
+IMAGE NAME: semaphoreci/rust:1-buster, ALIASES: 1.39-buster 1.39.0-buster buster 1 1.39 1.39.0 latest
+IMAGE NAME: semaphoreci/rust:1-stretch, ALIASES: 1.39-stretch 1.39.0-stretch stretch
+IMAGE NAME: semaphoreci/rust:1-buster-node, ALIASES: 1.39-buster-node 1.39.0-buster-node buster-node 1-node 1.39-node 1.39.0-node latest-node
+IMAGE NAME: semaphoreci/rust:1-stretch-node, ALIASES: 1.39-stretch-node 1.39.0-stretch-node stretch-node
+IMAGE NAME: semaphoreci/rust:1-buster-browsers, ALIASES: 1.39-buster-browsers 1.39.0-buster-browsers buster-browsers 1-browsers 1.39-browsers 1.39.0-browsers latest-browsers
+IMAGE NAME: semaphoreci/rust:1-stretch-browsers, ALIASES: 1.39-stretch-browsers 1.39.0-stretch-browsers stretch-browsers
+IMAGE NAME: semaphoreci/rust:1-buster-node-browsers, ALIASES: 1.39-buster-node-browsers 1.39.0-buster-node-browsers buster-node-browsers 1-node-browsers 1.39-node-browsers 1.39.0-node-browsers latest-node-browsers
+IMAGE NAME: semaphoreci/rust:1-stretch-node-browsers, ALIASES: 1.39-stretch-node-browsers 1.39.0-stretch-node-browsers stretch-node-browsers
