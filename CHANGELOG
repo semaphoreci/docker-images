@@ -525,3 +525,267 @@ IMAGE NAME: semaphoreci/haskell:8.6.5, ALIASES: 8.6
 -----------------------------------
 
 
+Docker repository update Mon Jan 13 15:19:55 UTC 2020
+-----------------------------------
+
+
+IMAGE NAME: semaphoreci/php:7.4.1-zts-buster, ALIASES: 7.4-zts-buster 7-zts-buster zts-buster 7.4.1-zts 7.4-zts 7-zts zts
+IMAGE NAME: semaphoreci/php:7.4.1-fpm-buster, ALIASES: 7.4-fpm-buster 7-fpm-buster fpm-buster 7.4.1-fpm 7.4-fpm 7-fpm fpm
+IMAGE NAME: semaphoreci/php:7.4.1-cli-buster, ALIASES: 7.4-cli-buster 7-cli-buster cli-buster 7.4.1-buster 7.4-buster 7-buster buster 7.4.1-cli 7.4-cli 7-cli cli 7.4.1 7.4 7 latest
+IMAGE NAME: semaphoreci/php:7.2.26-cli-buster, ALIASES: 7.2-cli-buster 7.2.26-buster 7.2-buster 7.2.26-cli 7.2-cli 7.2.26 7.2
+IMAGE NAME: semaphoreci/php:7.3.13-cli-buster, ALIASES: 7.3-cli-buster 7.3.13-buster 7.3-buster 7.3.13-cli 7.3-cli 7.3.13 7.3
+IMAGE NAME: semaphoreci/php:7.3.13-zts-buster, ALIASES: 7.3-zts-buster 7.3.13-zts 7.3-zts
+IMAGE NAME: semaphoreci/php:7.2.26-fpm-buster, ALIASES: 7.2-fpm-buster 7.2.26-fpm 7.2-fpm
+IMAGE NAME: semaphoreci/php:7.2.26-zts-buster, ALIASES: 7.2-zts-buster 7.2.26-zts 7.2-zts
+IMAGE NAME: semaphoreci/php:7.3.13-fpm-buster, ALIASES: 7.3-fpm-buster 7.3.13-fpm 7.3-fpm
+IMAGE NAME: semaphoreci/php:7.3.13-zts-stretch, ALIASES: 7.3-zts-stretch
+IMAGE NAME: semaphoreci/php:7.2.26-fpm-stretch, ALIASES: 7.2-fpm-stretch
+IMAGE NAME: semaphoreci/php:7.3.13-cli-stretch, ALIASES: 7.3-cli-stretch 7.3.13-stretch 7.3-stretch
+IMAGE NAME: semaphoreci/php:7.3.13-fpm-stretch, ALIASES: 7.3-fpm-stretch
+IMAGE NAME: semaphoreci/php:7.2.26-zts-stretch, ALIASES: 7.2-zts-stretch
+IMAGE NAME: semaphoreci/php:7.2.26-cli-stretch, ALIASES: 7.2-cli-stretch 7.2.26-stretch 7.2-stretch
+IMAGE NAME: semaphoreci/php:7.4.1-apache-buster, ALIASES: 7.4-apache-buster 7-apache-buster apache-buster 7.4.1-apache 7.4-apache 7-apache apache
+IMAGE NAME: semaphoreci/php:7.2.26-apache-buster, ALIASES: 7.2-apache-buster 7.2.26-apache 7.2-apache
+IMAGE NAME: semaphoreci/php:7.3.13-apache-buster, ALIASES: 7.3-apache-buster 7.3.13-apache 7.3-apache
+IMAGE NAME: semaphoreci/php:7.4.1-zts-buster-node, ALIASES: 7.4-zts-buster-node 7-zts-buster-node zts-buster-node 7.4.1-zts-node 7.4-zts-node 7-zts-node zts-node
+IMAGE NAME: semaphoreci/php:7.3.13-apache-stretch, ALIASES: 7.3-apache-stretch
+IMAGE NAME: semaphoreci/php:7.2.26-apache-stretch, ALIASES: 7.2-apache-stretch
+IMAGE NAME: semaphoreci/php:7.4.1-fpm-buster-node, ALIASES: 7.4-fpm-buster-node 7-fpm-buster-node fpm-buster-node 7.4.1-fpm-node 7.4-fpm-node 7-fpm-node fpm-node
+IMAGE NAME: semaphoreci/php:7.4.1-cli-buster-node, ALIASES: 7.4-cli-buster-node 7-cli-buster-node cli-buster-node 7.4.1-buster-node 7.4-buster-node 7-buster-node buster-node 7.4.1-cli-node 7.4-cli-node 7-cli-node cli-node 7.4.1-node 7.4-node 7-node latest-node
+IMAGE NAME: semaphoreci/php:7.2.26-cli-buster-node, ALIASES: 7.2-cli-buster-node 7.2.26-buster-node 7.2-buster-node 7.2.26-cli-node 7.2-cli-node 7.2.26-node 7.2-node
+IMAGE NAME: semaphoreci/php:7.3.13-cli-buster-node, ALIASES: 7.3-cli-buster-node 7.3.13-buster-node 7.3-buster-node 7.3.13-cli-node 7.3-cli-node 7.3.13-node 7.3-node
+IMAGE NAME: semaphoreci/php:7.3.13-zts-buster-node, ALIASES: 7.3-zts-buster-node 7.3.13-zts-node 7.3-zts-node
+IMAGE NAME: semaphoreci/php:7.2.26-fpm-buster-node, ALIASES: 7.2-fpm-buster-node 7.2.26-fpm-node 7.2-fpm-node
+IMAGE NAME: semaphoreci/php:7.2.26-zts-buster-node, ALIASES: 7.2-zts-buster-node 7.2.26-zts-node 7.2-zts-node
+IMAGE NAME: semaphoreci/php:7.3.13-fpm-buster-node, ALIASES: 7.3-fpm-buster-node 7.3.13-fpm-node 7.3-fpm-node
+IMAGE NAME: semaphoreci/php:7.3.13-zts-stretch-node, ALIASES: 7.3-zts-stretch-node
+IMAGE NAME: semaphoreci/php:7.2.26-fpm-stretch-node, ALIASES: 7.2-fpm-stretch-node
+IMAGE NAME: semaphoreci/php:7.3.13-cli-stretch-node, ALIASES: 7.3-cli-stretch-node 7.3.13-stretch-node 7.3-stretch-node
+IMAGE NAME: semaphoreci/php:7.3.13-fpm-stretch-node, ALIASES: 7.3-fpm-stretch-node
+IMAGE NAME: semaphoreci/php:7.2.26-zts-stretch-node, ALIASES: 7.2-zts-stretch-node
+IMAGE NAME: semaphoreci/php:7.2.26-cli-stretch-node, ALIASES: 7.2-cli-stretch-node 7.2.26-stretch-node 7.2-stretch-node
+IMAGE NAME: semaphoreci/php:7.4.1-apache-buster-node, ALIASES: 7.4-apache-buster-node 7-apache-buster-node apache-buster-node 7.4.1-apache-node 7.4-apache-node 7-apache-node apache-node
+IMAGE NAME: semaphoreci/php:7.2.26-apache-buster-node, ALIASES: 7.2-apache-buster-node 7.2.26-apache-node 7.2-apache-node
+IMAGE NAME: semaphoreci/php:7.4.1-zts-buster-browsers, ALIASES: 7.4-zts-buster-browsers 7-zts-buster-browsers zts-buster-browsers 7.4.1-zts-browsers 7.4-zts-browsers 7-zts-browsers zts-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-apache-buster-node, ALIASES: 7.3-apache-buster-node 7.3.13-apache-node 7.3-apache-node
+IMAGE NAME: semaphoreci/php:7.4.1-fpm-buster-browsers, ALIASES: 7.4-fpm-buster-browsers 7-fpm-buster-browsers fpm-buster-browsers 7.4.1-fpm-browsers 7.4-fpm-browsers 7-fpm-browsers fpm-browsers
+IMAGE NAME: semaphoreci/php:7.4.1-cli-buster-browsers, ALIASES: 7.4-cli-buster-browsers 7-cli-buster-browsers cli-buster-browsers 7.4.1-buster-browsers 7.4-buster-browsers 7-buster-browsers buster-browsers 7.4.1-cli-browsers 7.4-cli-browsers 7-cli-browsers cli-browsers 7.4.1-browsers 7.4-browsers 7-browsers latest-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-cli-buster-browsers, ALIASES: 7.2-cli-buster-browsers 7.2.26-buster-browsers 7.2-buster-browsers 7.2.26-cli-browsers 7.2-cli-browsers 7.2.26-browsers 7.2-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-cli-buster-browsers, ALIASES: 7.3-cli-buster-browsers 7.3.13-buster-browsers 7.3-buster-browsers 7.3.13-cli-browsers 7.3-cli-browsers 7.3.13-browsers 7.3-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-apache-stretch-node, ALIASES: 7.3-apache-stretch-node
+IMAGE NAME: semaphoreci/php:7.3.13-zts-buster-browsers, ALIASES: 7.3-zts-buster-browsers 7.3.13-zts-browsers 7.3-zts-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-fpm-buster-browsers, ALIASES: 7.2-fpm-buster-browsers 7.2.26-fpm-browsers 7.2-fpm-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-apache-stretch-node, ALIASES: 7.2-apache-stretch-node
+IMAGE NAME: semaphoreci/php:7.2.26-zts-buster-browsers, ALIASES: 7.2-zts-buster-browsers 7.2.26-zts-browsers 7.2-zts-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-fpm-buster-browsers, ALIASES: 7.3-fpm-buster-browsers 7.3.13-fpm-browsers 7.3-fpm-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-zts-stretch-browsers, ALIASES: 7.3-zts-stretch-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-fpm-stretch-browsers, ALIASES: 7.2-fpm-stretch-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-cli-stretch-browsers, ALIASES: 7.3-cli-stretch-browsers 7.3.13-stretch-browsers 7.3-stretch-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-fpm-stretch-browsers, ALIASES: 7.3-fpm-stretch-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-zts-stretch-browsers, ALIASES: 7.2-zts-stretch-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-cli-stretch-browsers, ALIASES: 7.2-cli-stretch-browsers 7.2.26-stretch-browsers 7.2-stretch-browsers
+IMAGE NAME: semaphoreci/php:7.4.1-apache-buster-browsers, ALIASES: 7.4-apache-buster-browsers 7-apache-buster-browsers apache-buster-browsers 7.4.1-apache-browsers 7.4-apache-browsers 7-apache-browsers apache-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-apache-buster-browsers, ALIASES: 7.2-apache-buster-browsers 7.2.26-apache-browsers 7.2-apache-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-apache-buster-browsers, ALIASES: 7.3-apache-buster-browsers 7.3.13-apache-browsers 7.3-apache-browsers
+IMAGE NAME: semaphoreci/php:7.4.1-zts-buster-node-browsers, ALIASES: 7.4-zts-buster-node-browsers 7-zts-buster-node-browsers zts-buster-node-browsers 7.4.1-zts-node-browsers 7.4-zts-node-browsers 7-zts-node-browsers zts-node-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-apache-stretch-browsers, ALIASES: 7.3-apache-stretch-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-apache-stretch-browsers, ALIASES: 7.2-apache-stretch-browsers
+IMAGE NAME: semaphoreci/php:7.4.1-fpm-buster-node-browsers, ALIASES: 7.4-fpm-buster-node-browsers 7-fpm-buster-node-browsers fpm-buster-node-browsers 7.4.1-fpm-node-browsers 7.4-fpm-node-browsers 7-fpm-node-browsers fpm-node-browsers
+IMAGE NAME: semaphoreci/php:7.4.1-cli-buster-node-browsers, ALIASES: 7.4-cli-buster-node-browsers 7-cli-buster-node-browsers cli-buster-node-browsers 7.4.1-buster-node-browsers 7.4-buster-node-browsers 7-buster-node-browsers buster-node-browsers 7.4.1-cli-node-browsers 7.4-cli-node-browsers 7-cli-node-browsers cli-node-browsers 7.4.1-node-browsers 7.4-node-browsers 7-node-browsers latest-node-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-cli-buster-node-browsers, ALIASES: 7.2-cli-buster-node-browsers 7.2.26-buster-node-browsers 7.2-buster-node-browsers 7.2.26-cli-node-browsers 7.2-cli-node-browsers 7.2.26-node-browsers 7.2-node-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-cli-buster-node-browsers, ALIASES: 7.3-cli-buster-node-browsers 7.3.13-buster-node-browsers 7.3-buster-node-browsers 7.3.13-cli-node-browsers 7.3-cli-node-browsers 7.3.13-node-browsers 7.3-node-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-zts-buster-node-browsers, ALIASES: 7.3-zts-buster-node-browsers 7.3.13-zts-node-browsers 7.3-zts-node-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-fpm-buster-node-browsers, ALIASES: 7.2-fpm-buster-node-browsers 7.2.26-fpm-node-browsers 7.2-fpm-node-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-zts-buster-node-browsers, ALIASES: 7.2-zts-buster-node-browsers 7.2.26-zts-node-browsers 7.2-zts-node-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-fpm-buster-node-browsers, ALIASES: 7.3-fpm-buster-node-browsers 7.3.13-fpm-node-browsers 7.3-fpm-node-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-zts-stretch-node-browsers, ALIASES: 7.3-zts-stretch-node-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-fpm-stretch-node-browsers, ALIASES: 7.2-fpm-stretch-node-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-cli-stretch-node-browsers, ALIASES: 7.3-cli-stretch-node-browsers 7.3.13-stretch-node-browsers 7.3-stretch-node-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-fpm-stretch-node-browsers, ALIASES: 7.3-fpm-stretch-node-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-zts-stretch-node-browsers, ALIASES: 7.2-zts-stretch-node-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-cli-stretch-node-browsers, ALIASES: 7.2-cli-stretch-node-browsers 7.2.26-stretch-node-browsers 7.2-stretch-node-browsers
+IMAGE NAME: semaphoreci/php:7.4.1-apache-buster-node-browsers, ALIASES: 7.4-apache-buster-node-browsers 7-apache-buster-node-browsers apache-buster-node-browsers 7.4.1-apache-node-browsers 7.4-apache-node-browsers 7-apache-node-browsers apache-node-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-apache-buster-node-browsers, ALIASES: 7.2-apache-buster-node-browsers 7.2.26-apache-node-browsers 7.2-apache-node-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-apache-buster-node-browsers, ALIASES: 7.3-apache-buster-node-browsers 7.3.13-apache-node-browsers 7.3-apache-node-browsers
+IMAGE NAME: semaphoreci/php:7.3.13-apache-stretch-node-browsers, ALIASES: 7.3-apache-stretch-node-browsers
+IMAGE NAME: semaphoreci/php:7.2.26-apache-stretch-node-browsers, ALIASES: 7.2-apache-stretch-node-browsers
+IMAGE NAME: semaphoreci/ruby:2.4.9-buster, ALIASES: 2.4-buster 2.4.9 2.4
+IMAGE NAME: semaphoreci/ruby:2.7.0-buster, ALIASES: 2.7-buster 2-buster buster 2.7.0 2.7 2 latest
+IMAGE NAME: semaphoreci/ruby:2.6.5-buster, ALIASES: 2.6-buster 2.6.5 2.6
+IMAGE NAME: semaphoreci/ruby:2.5.7-buster, ALIASES: 2.5-buster 2.5.7 2.5
+IMAGE NAME: semaphoreci/ruby:2.6.5-stretch, ALIASES: 2.6-stretch
+IMAGE NAME: semaphoreci/ruby:2.4.9-stretch, ALIASES: 2.4-stretch
+IMAGE NAME: semaphoreci/ruby:2.5.7-stretch, ALIASES: 2.5-stretch
+IMAGE NAME: semaphoreci/ruby:2.4.9-buster-node, ALIASES: 2.4-buster-node 2.4.9-node 2.4-node
+IMAGE NAME: semaphoreci/ruby:2.7.0-buster-node, ALIASES: 2.7-buster-node 2-buster-node buster-node 2.7.0-node 2.7-node 2-node latest-node
+IMAGE NAME: semaphoreci/ruby:2.6.5-buster-node, ALIASES: 2.6-buster-node 2.6.5-node 2.6-node
+IMAGE NAME: semaphoreci/ruby:2.5.7-buster-node, ALIASES: 2.5-buster-node 2.5.7-node 2.5-node
+IMAGE NAME: semaphoreci/ruby:2.6.5-stretch-node, ALIASES: 2.6-stretch-node
+IMAGE NAME: semaphoreci/ruby:2.4.9-stretch-node, ALIASES: 2.4-stretch-node
+IMAGE NAME: semaphoreci/ruby:2.5.7-stretch-node, ALIASES: 2.5-stretch-node
+IMAGE NAME: semaphoreci/ruby:2.4.9-buster-browsers, ALIASES: 2.4-buster-browsers 2.4.9-browsers 2.4-browsers
+IMAGE NAME: semaphoreci/ruby:2.7.0-buster-browsers, ALIASES: 2.7-buster-browsers 2-buster-browsers buster-browsers 2.7.0-browsers 2.7-browsers 2-browsers latest-browsers
+IMAGE NAME: semaphoreci/ruby:2.6.5-buster-browsers, ALIASES: 2.6-buster-browsers 2.6.5-browsers 2.6-browsers
+IMAGE NAME: semaphoreci/ruby:2.5.7-buster-browsers, ALIASES: 2.5-buster-browsers 2.5.7-browsers 2.5-browsers
+IMAGE NAME: semaphoreci/ruby:2.6.5-stretch-browsers, ALIASES: 2.6-stretch-browsers
+IMAGE NAME: semaphoreci/ruby:2.4.9-stretch-browsers, ALIASES: 2.4-stretch-browsers
+IMAGE NAME: semaphoreci/ruby:2.5.7-stretch-browsers, ALIASES: 2.5-stretch-browsers
+IMAGE NAME: semaphoreci/ruby:2.4.9-buster-node-browsers, ALIASES: 2.4-buster-node-browsers 2.4.9-node-browsers 2.4-node-browsers
+IMAGE NAME: semaphoreci/ruby:2.7.0-buster-node-browsers, ALIASES: 2.7-buster-node-browsers 2-buster-node-browsers buster-node-browsers 2.7.0-node-browsers 2.7-node-browsers 2-node-browsers latest-node-browsers
+IMAGE NAME: semaphoreci/ruby:2.6.5-buster-node-browsers, ALIASES: 2.6-buster-node-browsers 2.6.5-node-browsers 2.6-node-browsers
+IMAGE NAME: semaphoreci/ruby:2.5.7-buster-node-browsers, ALIASES: 2.5-buster-node-browsers 2.5.7-node-browsers 2.5-node-browsers
+IMAGE NAME: semaphoreci/ruby:2.6.5-stretch-node-browsers, ALIASES: 2.6-stretch-node-browsers
+IMAGE NAME: semaphoreci/ruby:2.4.9-stretch-node-browsers, ALIASES: 2.4-stretch-node-browsers
+IMAGE NAME: semaphoreci/ruby:2.5.7-stretch-node-browsers, ALIASES: 2.5-stretch-node-browsers
+IMAGE NAME: semaphoreci/python:3.5.9, ALIASES: 3.5
+IMAGE NAME: semaphoreci/python:3.7.6, ALIASES: 3.7
+IMAGE NAME: semaphoreci/python:3.8.1, ALIASES: 3.8 3 latest
+IMAGE NAME: semaphoreci/python:3.6.10, ALIASES: 3.6
+IMAGE NAME: semaphoreci/python:2.7.17, ALIASES: 2.7 2
+IMAGE NAME: semaphoreci/python:3.9.0a2, ALIASES: 3.9-rc rc
+IMAGE NAME: semaphoreci/python:3.5.9-node, ALIASES: 3.5-node
+IMAGE NAME: semaphoreci/python:3.7.6-node, ALIASES: 3.7-node
+IMAGE NAME: semaphoreci/python:3.8.1-node, ALIASES: 3.8-node 3-node latest-node
+IMAGE NAME: semaphoreci/python:3.6.10-node, ALIASES: 3.6-node
+IMAGE NAME: semaphoreci/python:2.7.17-node, ALIASES: 2.7-node 2-node
+IMAGE NAME: semaphoreci/python:3.7.6-buster, ALIASES: 3.7-buster
+IMAGE NAME: semaphoreci/python:3.8.1-buster, ALIASES: 3.8-buster 3-buster buster
+IMAGE NAME: semaphoreci/python:3.9.0a2-node, ALIASES: 3.9-rc-node rc-node
+IMAGE NAME: semaphoreci/python:3.5.9-buster, ALIASES: 3.5-buster
+IMAGE NAME: semaphoreci/python:3.5.9-stretch, ALIASES: 3.5-stretch
+IMAGE NAME: semaphoreci/python:3.7.6-stretch, ALIASES: 3.7-stretch
+IMAGE NAME: semaphoreci/python:2.7.17-buster, ALIASES: 2.7-buster 2-buster
+IMAGE NAME: semaphoreci/python:3.6.10-buster, ALIASES: 3.6-buster
+IMAGE NAME: semaphoreci/python:3.6.10-stretch, ALIASES: 3.6-stretch
+IMAGE NAME: semaphoreci/python:2.7.17-stretch, ALIASES: 2.7-stretch 2-stretch
+IMAGE NAME: semaphoreci/python:3.5.9-browsers, ALIASES: 3.5-browsers
+IMAGE NAME: semaphoreci/python:3.7.6-browsers, ALIASES: 3.7-browsers
+IMAGE NAME: semaphoreci/python:3.8.1-browsers, ALIASES: 3.8-browsers 3-browsers latest-browsers
+IMAGE NAME: semaphoreci/python:3.9.0a2-buster, ALIASES: 3.9-rc-buster rc-buster
+IMAGE NAME: semaphoreci/python:3.6.10-browsers, ALIASES: 3.6-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-browsers, ALIASES: 2.7-browsers 2-browsers
+IMAGE NAME: semaphoreci/python:3.9.0a2-browsers, ALIASES: 3.9-rc-browsers rc-browsers
+IMAGE NAME: semaphoreci/python:3.7.6-buster-node, ALIASES: 3.7-buster-node
+IMAGE NAME: semaphoreci/python:3.8.1-buster-node, ALIASES: 3.8-buster-node 3-buster-node buster-node
+IMAGE NAME: semaphoreci/python:3.5.9-buster-node, ALIASES: 3.5-buster-node
+IMAGE NAME: semaphoreci/python:3.5.9-stretch-node, ALIASES: 3.5-stretch-node
+IMAGE NAME: semaphoreci/python:3.7.6-stretch-node, ALIASES: 3.7-stretch-node
+IMAGE NAME: semaphoreci/python:2.7.17-buster-node, ALIASES: 2.7-buster-node 2-buster-node
+IMAGE NAME: semaphoreci/python:3.6.10-buster-node, ALIASES: 3.6-buster-node
+IMAGE NAME: semaphoreci/python:3.6.10-stretch-node, ALIASES: 3.6-stretch-node
+IMAGE NAME: semaphoreci/python:2.7.17-stretch-node, ALIASES: 2.7-stretch-node 2-stretch-node
+IMAGE NAME: semaphoreci/python:3.5.9-node-browsers, ALIASES: 3.5-node-browsers
+IMAGE NAME: semaphoreci/python:3.7.6-node-browsers, ALIASES: 3.7-node-browsers
+IMAGE NAME: semaphoreci/python:3.8.1-node-browsers, ALIASES: 3.8-node-browsers 3-node-browsers latest-node-browsers
+IMAGE NAME: semaphoreci/python:3.9.0a2-buster-node, ALIASES: 3.9-rc-buster-node rc-buster-node
+IMAGE NAME: semaphoreci/python:3.6.10-node-browsers, ALIASES: 3.6-node-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-node-browsers, ALIASES: 2.7-node-browsers 2-node-browsers
+IMAGE NAME: semaphoreci/python:3.7.6-buster-browsers, ALIASES: 3.7-buster-browsers
+IMAGE NAME: semaphoreci/python:3.8.1-buster-browsers, ALIASES: 3.8-buster-browsers 3-buster-browsers buster-browsers
+IMAGE NAME: semaphoreci/python:3.9.0a2-node-browsers, ALIASES: 3.9-rc-node-browsers rc-node-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-buster-browsers, ALIASES: 3.5-buster-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-stretch-browsers, ALIASES: 3.5-stretch-browsers
+IMAGE NAME: semaphoreci/python:3.7.6-stretch-browsers, ALIASES: 3.7-stretch-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-buster-browsers, ALIASES: 2.7-buster-browsers 2-buster-browsers
+IMAGE NAME: semaphoreci/python:3.6.10-buster-browsers, ALIASES: 3.6-buster-browsers
+IMAGE NAME: semaphoreci/python:3.6.10-stretch-browsers, ALIASES: 3.6-stretch-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-stretch-browsers, ALIASES: 2.7-stretch-browsers 2-stretch-browsers
+IMAGE NAME: semaphoreci/python:3.9.0a2-buster-browsers, ALIASES: 3.9-rc-buster-browsers rc-buster-browsers
+IMAGE NAME: semaphoreci/python:3.7.6-buster-node-browsers, ALIASES: 3.7-buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.8.1-buster-node-browsers, ALIASES: 3.8-buster-node-browsers 3-buster-node-browsers buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-buster-node-browsers, ALIASES: 3.5-buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.5.9-stretch-node-browsers, ALIASES: 3.5-stretch-node-browsers
+IMAGE NAME: semaphoreci/python:3.7.6-stretch-node-browsers, ALIASES: 3.7-stretch-node-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-buster-node-browsers, ALIASES: 2.7-buster-node-browsers 2-buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.6.10-buster-node-browsers, ALIASES: 3.6-buster-node-browsers
+IMAGE NAME: semaphoreci/python:3.6.10-stretch-node-browsers, ALIASES: 3.6-stretch-node-browsers
+IMAGE NAME: semaphoreci/python:2.7.17-stretch-node-browsers, ALIASES: 2.7-stretch-node-browsers 2-stretch-node-browsers
+IMAGE NAME: semaphoreci/python:3.9.0a2-buster-node-browsers, ALIASES: 3.9-rc-buster-node-browsers rc-buster-node-browsers
+IMAGE NAME: semaphoreci/node:13.6.0-buster, ALIASES: 13.6-buster 13-buster buster
+IMAGE NAME: semaphoreci/node:12.14.1-buster, ALIASES: 12.14-buster 12-buster erbium-buster lts-buster current-buster
+IMAGE NAME: semaphoreci/node:13.6.0-stretch, ALIASES: 13.6-stretch 13-stretch stretch 13.6.0 13.6 13 latest
+IMAGE NAME: semaphoreci/node:10.18.0-buster, ALIASES: 10.18-buster 10-buster dubnium-buster
+IMAGE NAME: semaphoreci/node:12.14.1-stretch, ALIASES: 12.14-stretch 12-stretch erbium-stretch lts-stretch current-stretch 12.14.1 12.14 12 erbium lts current
+IMAGE NAME: semaphoreci/node:10.18.0-stretch, ALIASES: 10.18-stretch 10-stretch dubnium-stretch 10.18.0 10.18 10 dubnium
+IMAGE NAME: semaphoreci/node:13.6.0-buster-browsers, ALIASES: 13.6-buster-browsers 13-buster-browsers buster-browsers
+IMAGE NAME: semaphoreci/node:12.14.1-buster-browsers, ALIASES: 12.14-buster-browsers 12-buster-browsers erbium-buster-browsers lts-buster-browsers current-buster-browsers
+IMAGE NAME: semaphoreci/node:13.6.0-stretch-browsers, ALIASES: 13.6-stretch-browsers 13-stretch-browsers stretch-browsers 13.6.0-browsers 13.6-browsers 13-browsers latest-browsers
+IMAGE NAME: semaphoreci/node:10.18.0-buster-browsers, ALIASES: 10.18-buster-browsers 10-buster-browsers dubnium-buster-browsers
+IMAGE NAME: semaphoreci/node:12.14.1-stretch-browsers, ALIASES: 12.14-stretch-browsers 12-stretch-browsers erbium-stretch-browsers lts-stretch-browsers current-stretch-browsers 12.14.1-browsers 12.14-browsers 12-browsers erbium-browsers lts-browsers current-browsers
+IMAGE NAME: semaphoreci/node:10.18.0-stretch-browsers, ALIASES: 10.18-stretch-browsers 10-stretch-browsers dubnium-stretch-browsers 10.18.0-browsers 10.18-browsers 10-browsers dubnium-browsers
+IMAGE NAME: semaphoreci/android:25, ALIASES: no aliases
+IMAGE NAME: semaphoreci/android:28, ALIASES: no aliases
+IMAGE NAME: semaphoreci/android:27, ALIASES: no aliases
+IMAGE NAME: semaphoreci/android:29, ALIASES: no aliases
+IMAGE NAME: semaphoreci/android:26, ALIASES: no aliases
+IMAGE NAME: semaphoreci/android:27-node, ALIASES: no aliases
+IMAGE NAME: semaphoreci/android:29-node, ALIASES: no aliases
+IMAGE NAME: semaphoreci/android:25-node, ALIASES: no aliases
+IMAGE NAME: semaphoreci/android:26-node, ALIASES: no aliases
+IMAGE NAME: semaphoreci/android:28-node, ALIASES: no aliases
+IMAGE NAME: semaphoreci/elixir:1.9.4, ALIASES: 1.9 latest
+IMAGE NAME: semaphoreci/elixir:1.4.5, ALIASES: 1.4
+IMAGE NAME: semaphoreci/elixir:1.8.2, ALIASES: 1.8
+IMAGE NAME: semaphoreci/elixir:1.5.3, ALIASES: 1.5
+IMAGE NAME: semaphoreci/elixir:1.6.6, ALIASES: 1.6
+IMAGE NAME: semaphoreci/elixir:1.7.4, ALIASES: 1.7
+IMAGE NAME: semaphoreci/elixir:1.9.4-node, ALIASES: 1.9-node latest-node
+IMAGE NAME: semaphoreci/elixir:1.4.5-node, ALIASES: 1.4-node
+IMAGE NAME: semaphoreci/elixir:1.8.2-node, ALIASES: 1.8-node
+IMAGE NAME: semaphoreci/elixir:1.5.3-node, ALIASES: 1.5-node
+IMAGE NAME: semaphoreci/elixir:1.6.6-node, ALIASES: 1.6-node
+IMAGE NAME: semaphoreci/elixir:1.7.4-node, ALIASES: 1.7-node
+IMAGE NAME: semaphoreci/elixir:1.6.6-otp-21, ALIASES: 1.6-otp-21
+IMAGE NAME: semaphoreci/elixir:1.8.2-otp-22, ALIASES: 1.8-otp-22
+IMAGE NAME: semaphoreci/elixir:1.9.4-browsers, ALIASES: 1.9-browsers latest-browsers
+IMAGE NAME: semaphoreci/elixir:1.4.5-browsers, ALIASES: 1.4-browsers
+IMAGE NAME: semaphoreci/elixir:1.8.2-browsers, ALIASES: 1.8-browsers
+IMAGE NAME: semaphoreci/elixir:1.5.3-browsers, ALIASES: 1.5-browsers
+IMAGE NAME: semaphoreci/elixir:1.6.6-browsers, ALIASES: 1.6-browsers
+IMAGE NAME: semaphoreci/elixir:1.7.4-browsers, ALIASES: 1.7-browsers
+IMAGE NAME: semaphoreci/elixir:1.6.6-otp-21-node, ALIASES: 1.6-otp-21-node
+IMAGE NAME: semaphoreci/elixir:1.8.2-otp-22-node, ALIASES: 1.8-otp-22-node
+IMAGE NAME: semaphoreci/elixir:1.6.6-otp-21-browsers, ALIASES: 1.6-otp-21-browsers
+IMAGE NAME: semaphoreci/elixir:1.8.2-otp-22-browsers, ALIASES: 1.8-otp-22-browsers
+IMAGE NAME: semaphoreci/erlang:22.2.1, ALIASES: 22.2 22 latest
+IMAGE NAME: semaphoreci/erlang:21.3.8.11, ALIASES: 21.3.8 21.3 21
+IMAGE NAME: semaphoreci/erlang:18.3.4.11, ALIASES: 18.3.4 18.3 18
+IMAGE NAME: semaphoreci/erlang:19.3.6.13, ALIASES: 19.3.6 19.3 19
+IMAGE NAME: semaphoreci/erlang:20.3.8.24, ALIASES: 20.3.8 20.3 20
+IMAGE NAME: semaphoreci/golang:1.13.6, ALIASES: 1.13 1 latest
+IMAGE NAME: semaphoreci/golang:1.12.15, ALIASES: 1.12
+IMAGE NAME: semaphoreci/golang:1.13.6-node, ALIASES: 1.13-node 1-node latest-node
+IMAGE NAME: semaphoreci/golang:1.12.15-node, ALIASES: 1.12-node
+IMAGE NAME: semaphoreci/golang:1.13.6-buster, ALIASES: 1.13-buster 1-buster buster
+IMAGE NAME: semaphoreci/golang:1.13.6-stretch, ALIASES: 1.13-stretch 1-stretch stretch
+IMAGE NAME: semaphoreci/golang:1.12.15-buster, ALIASES: 1.12-buster
+IMAGE NAME: semaphoreci/golang:1.13.6-browsers, ALIASES: 1.13-browsers 1-browsers latest-browsers
+IMAGE NAME: semaphoreci/golang:1.12.15-stretch, ALIASES: 1.12-stretch
+IMAGE NAME: semaphoreci/golang:1.12.15-browsers, ALIASES: 1.12-browsers
+IMAGE NAME: semaphoreci/golang:1.13.6-buster-node, ALIASES: 1.13-buster-node 1-buster-node buster-node
+IMAGE NAME: semaphoreci/golang:1.13.6-stretch-node, ALIASES: 1.13-stretch-node 1-stretch-node stretch-node
+IMAGE NAME: semaphoreci/golang:1.12.15-buster-node, ALIASES: 1.12-buster-node
+IMAGE NAME: semaphoreci/golang:1.13.6-node-browsers, ALIASES: 1.13-node-browsers 1-node-browsers latest-node-browsers
+IMAGE NAME: semaphoreci/golang:1.12.15-stretch-node, ALIASES: 1.12-stretch-node
+IMAGE NAME: semaphoreci/golang:1.12.15-node-browsers, ALIASES: 1.12-node-browsers
+IMAGE NAME: semaphoreci/golang:1.13.6-buster-browsers, ALIASES: 1.13-buster-browsers 1-buster-browsers buster-browsers
+IMAGE NAME: semaphoreci/golang:1.13.6-stretch-browsers, ALIASES: 1.13-stretch-browsers 1-stretch-browsers stretch-browsers
+IMAGE NAME: semaphoreci/golang:1.12.15-buster-browsers, ALIASES: 1.12-buster-browsers
+IMAGE NAME: semaphoreci/golang:1.12.15-stretch-browsers, ALIASES: 1.12-stretch-browsers
+IMAGE NAME: semaphoreci/golang:1.13.6-buster-node-browsers, ALIASES: 1.13-buster-node-browsers 1-buster-node-browsers buster-node-browsers
+IMAGE NAME: semaphoreci/golang:1.13.6-stretch-node-browsers, ALIASES: 1.13-stretch-node-browsers 1-stretch-node-browsers stretch-node-browsers
+IMAGE NAME: semaphoreci/golang:1.12.15-buster-node-browsers, ALIASES: 1.12-buster-node-browsers
+IMAGE NAME: semaphoreci/golang:1.12.15-stretch-node-browsers, ALIASES: 1.12-stretch-node-browsers
+IMAGE NAME: semaphoreci/rust:1-buster, ALIASES: 1.40-buster 1.40.0-buster buster 1 1.40 1.40.0 latest
+IMAGE NAME: semaphoreci/rust:1-stretch, ALIASES: 1.40-stretch 1.40.0-stretch stretch
+IMAGE NAME: semaphoreci/rust:1-buster-node, ALIASES: 1.40-buster-node 1.40.0-buster-node buster-node 1-node 1.40-node 1.40.0-node latest-node
+IMAGE NAME: semaphoreci/rust:1-stretch-node, ALIASES: 1.40-stretch-node 1.40.0-stretch-node stretch-node
+IMAGE NAME: semaphoreci/rust:1-buster-browsers, ALIASES: 1.40-buster-browsers 1.40.0-buster-browsers buster-browsers 1-browsers 1.40-browsers 1.40.0-browsers latest-browsers
+IMAGE NAME: semaphoreci/rust:1-stretch-browsers, ALIASES: 1.40-stretch-browsers 1.40.0-stretch-browsers stretch-browsers
+IMAGE NAME: semaphoreci/rust:1-buster-node-browsers, ALIASES: 1.40-buster-node-browsers 1.40.0-buster-node-browsers buster-node-browsers 1-node-browsers 1.40-node-browsers 1.40.0-node-browsers latest-node-browsers
+IMAGE NAME: semaphoreci/rust:1-stretch-node-browsers, ALIASES: 1.40-stretch-node-browsers 1.40.0-stretch-node-browsers stretch-node-browsers
+IMAGE NAME: semaphoreci/haskell:8.8.1, ALIASES: 8.8 8 latest
+IMAGE NAME: semaphoreci/haskell:8.6.5, ALIASES: 8.6
+-----------------------------------
+
+
