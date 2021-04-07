@@ -163,7 +163,7 @@ ENV PATH="${FLUTTER_ROOT}/bin:${PATH}"
 
 RUN flutter channel stable && flutter upgrade
 
-RUN flutter --version
+RUN flutter version
 
 RUN flutter config  --no-analytics
 
