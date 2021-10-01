@@ -90,9 +90,18 @@ RUN apt-get install -y \
 # Additional deps
 RUN apt-get purge maven maven2 \
     && apt-get update \
-    && apt-get -y install maven gradle \
+    && apt-get -y install maven \
     && mvn --version \
+    && wget https://services.gradle.org/distributions/gradle-7.2-bin.zip -P /tmp/ \
+    && unzip -d /opt/gradle /tmp/gradle-7.2-bin.zip \
+    && rm -rf /tmp/gradle-7.2-bin.zip \
+    && echo 'export GRADLE_HOME=/opt/gradle/gradle-7.2' > /etc/profile.d/gradle.sh \
+    && echo 'export PATH=${GRADLE_HOME}/bin:${PATH}' >> /etc/profile.d/gradle.sh \
+    && chmod +x /etc/profile.d/gradle.sh \
+    && . /etc/profile.d/gradle.sh \
     && gradle -v
+ENV GRADLE_HOME=/opt/gradle/gradle-7.2
+ENV PATH=${GRADLE_HOME}/bin:${PATH}
 
 # Download Ruby
 RUN apt-get update \
@@ -118,7 +127,7 @@ ENV PATH=${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bi
 # Install Android SDK
 RUN mkdir ~/.android && echo "### User Sources for Android SDK Manager" > ~/.android/repositories.cfg
 RUN yes | sdkmanager --licenses && yes | sdkmanager --update
-RUN sdkmanager "emulator" "tools" "platform-tools"
+RUN sdkmanager "emulator" "tools" "platform-tools" "cmdline-tools;latest"
 RUN yes | sdkmanager \
     "build-tools;30.0.0" \
     "build-tools;30.0.1" \
@@ -155,19 +164,22 @@ RUN sdkmanager "platforms;android-30"
 
 
 ENV FLUTTER_ROOT="/opt/flutter"
-RUN git clone --branch stable https://github.com/flutter/flutter "${FLUTTER_ROOT}"
+RUN rm -rf /opt/flutter* \
+    && cd /opt \
+    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.2.3-stable.tar.xz \
+    && tar -xf flutter_linux_2.2.3-stable.tar.xz && mv flutter flutter_2.2.3 && rm -f flutter_linux_2.2.3-stable.tar.xz \
+    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.5.1-stable.tar.xz \
+    && tar -xf flutter_linux_2.5.1-stable.tar.xz && mv flutter flutter_2.5.1 && rm -f flutter_linux_2.5.1-stable.tar.xz \
+    && ln -s /opt/flutter_2.2.3 /opt/flutter 
 ENV PATH="${FLUTTER_ROOT}/bin:${PATH}"
 
-RUN flutter channel stable && flutter upgrade
-
-RUN flutter --version
-
-RUN flutter config  --no-analytics
-
-RUN flutter precache
-
-# Accept licenses.
-RUN yes "y" | flutter doctor --android-licenses
-RUN flutter doctor -v
-
+RUN flutter config --no-analytics \
+    && flutter precache \
+    && yes "y" | flutter doctor --android-licenses \
+    && flutter doctor -v \
+    && rm /opt/flutter \
+    && ln -s /opt/flutter_2.5.1 /opt/flutter \
+    && flutter config  --no-analytics && flutter precache \
+    && yes "y" | flutter doctor --android-licenses \
+    && flutter doctor -v
 ENV PATH $PATH:/flutter/bin/cache/dart-sdk/bin:/flutter/bin
