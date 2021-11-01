@@ -3,7 +3,7 @@
 #
 # This file is generated automatically
 
-FROM openjdk:8-jdk-slim
+FROM openjdk:11-jdk-slim
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
@@ -118,11 +118,12 @@ ENV PATH /opt/rubies/ruby-2.6.1/bin:${PATH}
 RUN echo 'gem: --env-shebang --no-rdoc --no-ri' >> ~/.gemrc && gem install bundler
 
 # Download Android SDK
-RUN cd /opt \
-    && wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk-tools.zip \
-    && unzip -q android-sdk-tools.zip -d ${ANDROID_HOME} \
-    && rm android-sdk-tools.zip
-ENV PATH=${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:${PATH}
+RUN cd /opt && mkdir -p ${ANDROID_HOME}/cmdline-tools/latest \
+    && wget -q https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip -O android-sdk-tools.zip \
+    && unzip -q android-sdk-tools.zip \
+    && mv cmdline-tools/* ${ANDROID_HOME}/cmdline-tools/latest/ \
+    && rm -rf android-sdk-tools.zip cmdline-tools
+ENV PATH=${ANDROID_HOME}/cmdline-tools/latest/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:${PATH}
 
 # Install Android SDK
 RUN mkdir ~/.android && echo "### User Sources for Android SDK Manager" > ~/.android/repositories.cfg
@@ -132,19 +133,7 @@ RUN yes | sdkmanager \
     "build-tools;30.0.0" \
     "build-tools;30.0.1" \
     "build-tools;30.0.2" \
-    "build-tools;29.0.2" \
-    "build-tools;29.0.1" \
-    "build-tools;28.0.3" \
-    "build-tools;28.0.2" \
-    "build-tools;28.0.1" \
-    "build-tools;27.0.3" \
-    "build-tools;27.0.2" \
-    "build-tools;27.0.1" \
-    "build-tools;27.0.0" \
-    "build-tools;26.0.2" \
-    "build-tools;26.0.1" \
-    "build-tools;25.0.3"
-
+    "build-tools;31.0.0"
 # Download Google Cloud SDK
 RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
     echo "deb https://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
@@ -168,8 +157,8 @@ RUN rm -rf /opt/flutter* \
     && cd /opt \
     && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.2.3-stable.tar.xz \
     && tar -xf flutter_linux_2.2.3-stable.tar.xz && mv flutter flutter_2.2.3 && rm -f flutter_linux_2.2.3-stable.tar.xz \
-    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.5.1-stable.tar.xz \
-    && tar -xf flutter_linux_2.5.1-stable.tar.xz && mv flutter flutter_2.5.1 && rm -f flutter_linux_2.5.1-stable.tar.xz \
+    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.5.2-stable.tar.xz \
+    && tar -xf flutter_linux_2.5.2-stable.tar.xz && mv flutter flutter_2.5.2 && rm -f flutter_linux_2.5.2-stable.tar.xz \
     && ln -s /opt/flutter_2.2.3 /opt/flutter 
 ENV PATH="${FLUTTER_ROOT}/bin:${PATH}"
 
@@ -178,7 +167,7 @@ RUN flutter config --no-analytics \
     && yes "y" | flutter doctor --android-licenses \
     && flutter doctor -v \
     && rm /opt/flutter \
-    && ln -s /opt/flutter_2.5.1 /opt/flutter \
+    && ln -s /opt/flutter_2.5.2 /opt/flutter \
     && flutter config  --no-analytics && flutter precache \
     && yes "y" | flutter doctor --android-licenses \
     && flutter doctor -v
