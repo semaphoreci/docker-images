@@ -105,17 +105,17 @@ ENV PATH=${GRADLE_HOME}/bin:${PATH}
 
 # Download Ruby
 RUN apt-get update \
-    && cd /tmp && wget -O ruby-install-0.6.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.1.tar.gz \
-    && tar -xzvf ruby-install-0.6.1.tar.gz \
-    && cd ruby-install-0.6.1 \
+    && cd /tmp && wget -O ruby-install-0.8.3.tar.gz https://github.com/postmodern/ruby-install/archive/v0.8.3.tar.gz \
+    && tar -xzvf ruby-install-0.8.3.tar.gz \
+    && cd ruby-install-0.8.3 \
     && make install \
-    && ruby-install --cleanup ruby 2.6.1 \
+    && ruby-install --cleanup ruby 2.6.8 \
     && rm -r /tmp/ruby-install-* \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure Ruby
-ENV PATH /opt/rubies/ruby-2.6.1/bin:${PATH}
-RUN echo 'gem: --env-shebang --no-rdoc --no-ri' >> ~/.gemrc && gem install bundler
+ENV PATH /opt/rubies/ruby-2.6.8/bin:${PATH}
+RUN echo 'gem: --env-shebang --no-rdoc --no-ri' >> ~/.gemrc && gem install bundler fastlane
 
 # Download Android SDK
 RUN cd /opt && mkdir -p ${ANDROID_HOME}/cmdline-tools/latest \
@@ -155,11 +155,11 @@ RUN sdkmanager "platforms;android-30"
 ENV FLUTTER_ROOT="/opt/flutter"
 RUN rm -rf /opt/flutter* \
     && cd /opt \
-    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.2.3-stable.tar.xz \
-    && tar -xf flutter_linux_2.2.3-stable.tar.xz && mv flutter flutter_2.2.3 && rm -f flutter_linux_2.2.3-stable.tar.xz \
-    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.5.2-stable.tar.xz \
-    && tar -xf flutter_linux_2.5.2-stable.tar.xz && mv flutter flutter_2.5.2 && rm -f flutter_linux_2.5.2-stable.tar.xz \
-    && ln -s /opt/flutter_2.2.3 /opt/flutter 
+    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.5.3-stable.tar.xz \
+    && tar -xf flutter_linux_2.5.3-stable.tar.xz && mv flutter flutter_2.5.3 && rm -f flutter_linux_2.5.3-stable.tar.xz \
+    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.8.1-stable.tar.xz \
+    && tar -xf flutter_linux_2.8.1-stable.tar.xz && mv flutter flutter_2.8.1 && rm -f flutter_linux_2.8.1-stable.tar.xz \
+    && ln -s /opt/flutter_2.5.3 /opt/flutter 
 ENV PATH="${FLUTTER_ROOT}/bin:${PATH}"
 
 RUN flutter config --no-analytics \
@@ -167,7 +167,7 @@ RUN flutter config --no-analytics \
     && yes "y" | flutter doctor --android-licenses \
     && flutter doctor -v \
     && rm /opt/flutter \
-    && ln -s /opt/flutter_2.5.2 /opt/flutter \
+    && ln -s /opt/flutter_2.8.1 /opt/flutter \
     && flutter config  --no-analytics && flutter precache \
     && yes "y" | flutter doctor --android-licenses \
     && flutter doctor -v

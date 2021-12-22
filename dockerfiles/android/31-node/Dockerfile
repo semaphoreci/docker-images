@@ -105,17 +105,17 @@ ENV PATH=${GRADLE_HOME}/bin:${PATH}
 
 # Download Ruby
 RUN apt-get update \
-    && cd /tmp && wget -O ruby-install-0.6.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.1.tar.gz \
-    && tar -xzvf ruby-install-0.6.1.tar.gz \
-    && cd ruby-install-0.6.1 \
+    && cd /tmp && wget -O ruby-install-0.8.3.tar.gz https://github.com/postmodern/ruby-install/archive/v0.8.3.tar.gz \
+    && tar -xzvf ruby-install-0.8.3.tar.gz \
+    && cd ruby-install-0.8.3 \
     && make install \
-    && ruby-install --cleanup ruby 2.6.1 \
+    && ruby-install --cleanup ruby 2.6.8 \
     && rm -r /tmp/ruby-install-* \
     && rm -rf /var/lib/apt/lists/*
 
 # Configure Ruby
-ENV PATH /opt/rubies/ruby-2.6.1/bin:${PATH}
-RUN echo 'gem: --env-shebang --no-rdoc --no-ri' >> ~/.gemrc && gem install bundler
+ENV PATH /opt/rubies/ruby-2.6.8/bin:${PATH}
+RUN echo 'gem: --env-shebang --no-rdoc --no-ri' >> ~/.gemrc && gem install bundler fastlane
 
 # Download Android SDK
 RUN cd /opt && mkdir -p ${ANDROID_HOME}/cmdline-tools/latest \
@@ -154,6 +154,6 @@ RUN sdkmanager "platforms;android-31"
 
 
 # Install NodeJS
-RUN curl -o- https://deb.nodesource.com/setup_10.x | bash \
+RUN curl -o- https://deb.nodesource.com/setup_16.x | bash \
     && apt-get install -y nodejs
 

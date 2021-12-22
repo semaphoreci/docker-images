@@ -10,6 +10,6 @@ FROM registry.semaphoreci.com/rust:1-bullseye
 
 
 # Install NodeJS
-RUN curl -o- https://deb.nodesource.com/setup_10.x | bash \
+RUN curl -o- https://deb.nodesource.com/setup_16.x | bash \
     && apt-get install -y nodejs
 

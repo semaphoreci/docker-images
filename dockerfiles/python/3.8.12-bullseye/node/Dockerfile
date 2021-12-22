@@ -10,6 +10,6 @@ FROM registry.semaphoreci.com/python:3.8.12-bullseye
 
 
 # Install NodeJS
-RUN curl -o- https://deb.nodesource.com/setup_10.x | bash \
+RUN curl -o- https://deb.nodesource.com/setup_16.x | bash \
     && apt-get install -y nodejs
 
