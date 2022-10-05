@@ -178,3 +178,180 @@ IMAGE NAME: registry.semaphoreci.com/haskell:9.0.2-buster, ALIASES: 9.0-buster 9
 IMAGE NAME: registry.semaphoreci.com/haskell:8.10.7-buster, ALIASES: 8.10-buster 8-buster 8.10.7 8.10 8
 
 
+Docker repository update Wed Oct  5 11:24:56 UTC 2022
+-----------------------------------
+
+
+IMAGE NAME: registry.semaphoreci.com/ruby:3.1.2-buster, ALIASES: 3.1-buster 3-buster buster
+IMAGE NAME: registry.semaphoreci.com/ruby:3.0.4-buster, ALIASES: 3.0-buster
+IMAGE NAME: registry.semaphoreci.com/ruby:2.7.6-buster, ALIASES: 2.7-buster 2-buster
+IMAGE NAME: registry.semaphoreci.com/ruby:2.7.6-bullseye, ALIASES: 2.7-bullseye 2-bullseye 2.7.6 2.7 2
+IMAGE NAME: registry.semaphoreci.com/ruby:3.0.4-bullseye, ALIASES: 3.0-bullseye 3.0.4 3.0
+IMAGE NAME: registry.semaphoreci.com/ruby:3.1.2-bullseye, ALIASES: 3.1-bullseye 3-bullseye bullseye 3.1.2 3.1 3 latest
+IMAGE NAME: registry.semaphoreci.com/ruby:3.1.2-buster-node, ALIASES: 3.1-buster-node 3-buster-node buster-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.0.4-buster-node, ALIASES: 3.0-buster-node
+IMAGE NAME: registry.semaphoreci.com/ruby:2.7.6-buster-node, ALIASES: 2.7-buster-node 2-buster-node
+IMAGE NAME: registry.semaphoreci.com/ruby:2.7.6-bullseye-node, ALIASES: 2.7-bullseye-node 2-bullseye-node 2.7.6-node 2.7-node 2-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.0.4-bullseye-node, ALIASES: 3.0-bullseye-node 3.0.4-node 3.0-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.1.2-bullseye-node, ALIASES: 3.1-bullseye-node 3-bullseye-node bullseye-node 3.1.2-node 3.1-node 3-node latest-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.1.2-buster-browsers, ALIASES: 3.1-buster-browsers 3-buster-browsers buster-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.0.4-buster-browsers, ALIASES: 3.0-buster-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:2.7.6-buster-browsers, ALIASES: 2.7-buster-browsers 2-buster-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:2.7.6-bullseye-browsers, ALIASES: 2.7-bullseye-browsers 2-bullseye-browsers 2.7.6-browsers 2.7-browsers 2-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.0.4-bullseye-browsers, ALIASES: 3.0-bullseye-browsers 3.0.4-browsers 3.0-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.1.2-bullseye-browsers, ALIASES: 3.1-bullseye-browsers 3-bullseye-browsers bullseye-browsers 3.1.2-browsers 3.1-browsers 3-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.1.2-buster-node-browsers, ALIASES: 3.1-buster-node-browsers 3-buster-node-browsers buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.0.4-buster-node-browsers, ALIASES: 3.0-buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:2.7.6-buster-node-browsers, ALIASES: 2.7-buster-node-browsers 2-buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:2.7.6-bullseye-node-browsers, ALIASES: 2.7-bullseye-node-browsers 2-bullseye-node-browsers 2.7.6-node-browsers 2.7-node-browsers 2-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.0.4-bullseye-node-browsers, ALIASES: 3.0-bullseye-node-browsers 3.0.4-node-browsers 3.0-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.1.2-bullseye-node-browsers, ALIASES: 3.1-bullseye-node-browsers 3-bullseye-node-browsers bullseye-node-browsers 3.1.2-node-browsers 3.1-node-browsers 3-node-browsers latest-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7, ALIASES: 3.10 3 latest
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14, ALIASES: 3.7
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14, ALIASES: 3.8
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14, ALIASES: 3.9
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2, ALIASES: 3.11-rc
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-node, ALIASES: 3.10-node 3-node latest-node
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-node, ALIASES: 3.7-node
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-node, ALIASES: 3.8-node
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-node, ALIASES: 3.9-node
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-buster, ALIASES: 3.8-buster
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-buster, ALIASES: 3.7-buster
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-buster, ALIASES: 3.9-buster
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-buster, ALIASES: 3.10-buster 3-buster buster
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-node, ALIASES: 3.11-rc-node
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-bullseye, ALIASES: 3.7-bullseye
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-bullseye, ALIASES: 3.10-bullseye 3-bullseye bullseye
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-browsers, ALIASES: 3.10-browsers 3-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-browsers, ALIASES: 3.7-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-bullseye, ALIASES: 3.9-bullseye
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-browsers, ALIASES: 3.8-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-bullseye, ALIASES: 3.8-bullseye
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-browsers, ALIASES: 3.9-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-buster, ALIASES: 3.11-rc-buster
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-buster-node, ALIASES: 3.8-buster-node
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-buster-node, ALIASES: 3.7-buster-node
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-bullseye, ALIASES: 3.11-rc-bullseye
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-buster-node, ALIASES: 3.9-buster-node
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-browsers, ALIASES: 3.11-rc-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-buster-node, ALIASES: 3.10-buster-node 3-buster-node buster-node
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-bullseye-node, ALIASES: 3.7-bullseye-node
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-bullseye-node, ALIASES: 3.10-bullseye-node 3-bullseye-node bullseye-node
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-node-browsers, ALIASES: 3.10-node-browsers 3-node-browsers latest-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-node-browsers, ALIASES: 3.7-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-bullseye-node, ALIASES: 3.9-bullseye-node
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-node-browsers, ALIASES: 3.8-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-bullseye-node, ALIASES: 3.8-bullseye-node
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-node-browsers, ALIASES: 3.9-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-buster-node, ALIASES: 3.11-rc-buster-node
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-buster-browsers, ALIASES: 3.8-buster-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-buster-browsers, ALIASES: 3.7-buster-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-buster-browsers, ALIASES: 3.9-buster-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-buster-browsers, ALIASES: 3.10-buster-browsers 3-buster-browsers buster-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-bullseye-node, ALIASES: 3.11-rc-bullseye-node
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-node-browsers, ALIASES: 3.11-rc-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-bullseye-browsers, ALIASES: 3.7-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-bullseye-browsers, ALIASES: 3.10-bullseye-browsers 3-bullseye-browsers bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-bullseye-browsers, ALIASES: 3.9-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-bullseye-browsers, ALIASES: 3.8-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-buster-browsers, ALIASES: 3.11-rc-buster-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-buster-node-browsers, ALIASES: 3.8-buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-buster-node-browsers, ALIASES: 3.7-buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-bullseye-browsers, ALIASES: 3.11-rc-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-buster-node-browsers, ALIASES: 3.9-buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-buster-node-browsers, ALIASES: 3.10-buster-node-browsers 3-buster-node-browsers buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.7.14-bullseye-node-browsers, ALIASES: 3.7-bullseye-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.7-bullseye-node-browsers, ALIASES: 3.10-bullseye-node-browsers 3-bullseye-node-browsers bullseye-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.9.14-bullseye-node-browsers, ALIASES: 3.9-bullseye-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.8.14-bullseye-node-browsers, ALIASES: 3.8-bullseye-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-buster-node-browsers, ALIASES: 3.11-rc-buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.0rc2-bullseye-node-browsers, ALIASES: 3.11-rc-bullseye-node-browsers
+IMAGE NAME: registry.semaphoreci.com/node:18, ALIASES: 18-bullseye 18.10 18.10-bullseye 18.10.0 18.10.0-bullseye bullseye current current-bullseye latest
+IMAGE NAME: registry.semaphoreci.com/node:14, ALIASES: 14-buster 14.20 14.20-buster 14.20.1 14.20.1-buster fermium fermium-buster
+IMAGE NAME: registry.semaphoreci.com/node:16, ALIASES: 16-buster 16.17 16.17-buster 16.17.1 16.17.1-buster gallium gallium-buster lts lts-buster lts-gallium
+IMAGE NAME: registry.semaphoreci.com/node:18-buster, ALIASES: 18.10-buster 18.10.0-buster buster current-buster
+IMAGE NAME: registry.semaphoreci.com/node:14-bullseye, ALIASES: 14.20-bullseye 14.20.1-bullseye fermium-bullseye
+IMAGE NAME: registry.semaphoreci.com/node:18-browsers, ALIASES: 18-bullseye-browsers 18.10-browsers 18.10-bullseye-browsers 18.10.0-browsers 18.10.0-bullseye-browsers bullseye-browsers current-browsers current-bullseye-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/node:14-browsers, ALIASES: 14-buster-browsers 14.20-browsers 14.20-buster-browsers 14.20.1-browsers 14.20.1-buster-browsers fermium-browsers fermium-buster-browsers
+IMAGE NAME: registry.semaphoreci.com/node:16-bullseye, ALIASES: 16.17-bullseye 16.17.1-bullseye gallium-bullseye lts-bullseye
+IMAGE NAME: registry.semaphoreci.com/node:16-browsers, ALIASES: 16-buster-browsers 16.17-browsers 16.17-buster-browsers 16.17.1-browsers 16.17.1-buster-browsers gallium-browsers gallium-buster-browsers lts-browsers lts-buster-browsers lts-gallium-browsers
+IMAGE NAME: registry.semaphoreci.com/node:18-buster-browsers, ALIASES: 18.10-buster-browsers 18.10.0-buster-browsers buster-browsers current-buster-browsers
+IMAGE NAME: registry.semaphoreci.com/node:14-bullseye-browsers, ALIASES: 14.20-bullseye-browsers 14.20.1-bullseye-browsers fermium-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/node:16-bullseye-browsers, ALIASES: 16.17-bullseye-browsers 16.17.1-bullseye-browsers gallium-bullseye-browsers lts-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/android:33, ALIASES: no aliases
+IMAGE NAME: registry.semaphoreci.com/android:33-node, ALIASES: no aliases
+IMAGE NAME: registry.semaphoreci.com/android:33-flutter, ALIASES: no aliases
+IMAGE NAME: registry.semaphoreci.com/elixir:1.7.4, ALIASES: 1.7
+IMAGE NAME: registry.semaphoreci.com/elixir:1.8.2, ALIASES: 1.8
+IMAGE NAME: registry.semaphoreci.com/elixir:1.9.4, ALIASES: 1.9
+IMAGE NAME: registry.semaphoreci.com/elixir:1.14.0, ALIASES: 1.14 latest
+IMAGE NAME: registry.semaphoreci.com/elixir:1.12.3, ALIASES: 1.12
+IMAGE NAME: registry.semaphoreci.com/elixir:1.13.4, ALIASES: 1.13
+IMAGE NAME: registry.semaphoreci.com/elixir:1.11.4, ALIASES: 1.11
+IMAGE NAME: registry.semaphoreci.com/elixir:1.10.4, ALIASES: 1.10
+IMAGE NAME: registry.semaphoreci.com/elixir:1.7.4-node, ALIASES: 1.7-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.8.2-node, ALIASES: 1.8-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.9.4-node, ALIASES: 1.9-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.14.0-node, ALIASES: 1.14-node latest-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.12.3-node, ALIASES: 1.12-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.13.4-node, ALIASES: 1.13-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.11.4-node, ALIASES: 1.11-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.10.4-node, ALIASES: 1.10-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.8.2-otp-22, ALIASES: 1.8-otp-22
+IMAGE NAME: registry.semaphoreci.com/elixir:1.13.4-otp-25, ALIASES: 1.13-otp-25
+IMAGE NAME: registry.semaphoreci.com/elixir:1.7.4-browsers, ALIASES: 1.7-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.8.2-browsers, ALIASES: 1.8-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.9.4-browsers, ALIASES: 1.9-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.14.0-browsers, ALIASES: 1.14-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.12.3-browsers, ALIASES: 1.12-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.13.4-browsers, ALIASES: 1.13-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.11.4-browsers, ALIASES: 1.11-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.10.4-browsers, ALIASES: 1.10-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.8.2-otp-22-node, ALIASES: 1.8-otp-22-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.13.4-otp-25-node, ALIASES: 1.13-otp-25-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.8.2-otp-22-browsers, ALIASES: 1.8-otp-22-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.13.4-otp-25-browsers, ALIASES: 1.13-otp-25-browsers
+IMAGE NAME: registry.semaphoreci.com/erlang:25.1.0.0, ALIASES: 25.1.0 25.1 25 latest
+IMAGE NAME: registry.semaphoreci.com/erlang:24.3.4.5, ALIASES: 24.3.4 24.3 24
+IMAGE NAME: registry.semaphoreci.com/erlang:21.3.8.24, ALIASES: 21.3.8 21.3 21
+IMAGE NAME: registry.semaphoreci.com/erlang:23.3.4.17, ALIASES: 23.3.4 23.3 23
+IMAGE NAME: registry.semaphoreci.com/erlang:20.3.8.26, ALIASES: 20.3.8 20.3 20
+IMAGE NAME: registry.semaphoreci.com/erlang:22.3.4.26, ALIASES: 22.3.4 22.3 22
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1, ALIASES: 1.19 1 latest
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6, ALIASES: 1.18
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-node, ALIASES: 1.19-node 1-node latest-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-node, ALIASES: 1.18-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-buster, ALIASES: 1.18-buster
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-buster, ALIASES: 1.19-buster 1-buster buster
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-browsers, ALIASES: 1.19-browsers 1-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-bullseye, ALIASES: 1.18-bullseye
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-bullseye, ALIASES: 1.19-bullseye 1-bullseye bullseye
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-browsers, ALIASES: 1.18-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-buster-node, ALIASES: 1.18-buster-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-buster-node, ALIASES: 1.19-buster-node 1-buster-node buster-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-node-browsers, ALIASES: 1.19-node-browsers 1-node-browsers latest-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-bullseye-node, ALIASES: 1.18-bullseye-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-bullseye-node, ALIASES: 1.19-bullseye-node 1-bullseye-node bullseye-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-node-browsers, ALIASES: 1.18-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-buster-browsers, ALIASES: 1.18-buster-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-buster-browsers, ALIASES: 1.19-buster-browsers 1-buster-browsers buster-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-bullseye-browsers, ALIASES: 1.18-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-bullseye-browsers, ALIASES: 1.19-bullseye-browsers 1-bullseye-browsers bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-buster-node-browsers, ALIASES: 1.18-buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-buster-node-browsers, ALIASES: 1.19-buster-node-browsers 1-buster-node-browsers buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.18.6-bullseye-node-browsers, ALIASES: 1.18-bullseye-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.19.1-bullseye-node-browsers, ALIASES: 1.19-bullseye-node-browsers 1-bullseye-node-browsers bullseye-node-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-buster, ALIASES: 1.64-buster 1.64.0-buster buster
+IMAGE NAME: registry.semaphoreci.com/rust:1-bullseye, ALIASES: 1.64-bullseye 1.64.0-bullseye bullseye 1 1.64 1.64.0 latest
+IMAGE NAME: registry.semaphoreci.com/rust:1-buster-node, ALIASES: 1.64-buster-node 1.64.0-buster-node buster-node
+IMAGE NAME: registry.semaphoreci.com/rust:1-bullseye-node, ALIASES: 1.64-bullseye-node 1.64.0-bullseye-node bullseye-node 1-node 1.64-node 1.64.0-node latest-node
+IMAGE NAME: registry.semaphoreci.com/rust:1-buster-browsers, ALIASES: 1.64-buster-browsers 1.64.0-buster-browsers buster-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-bullseye-browsers, ALIASES: 1.64-bullseye-browsers 1.64.0-bullseye-browsers bullseye-browsers 1-browsers 1.64-browsers 1.64.0-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-buster-node-browsers, ALIASES: 1.64-buster-node-browsers 1.64.0-buster-node-browsers buster-node-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-bullseye-node-browsers, ALIASES: 1.64-bullseye-node-browsers 1.64.0-bullseye-node-browsers bullseye-node-browsers 1-node-browsers 1.64-node-browsers 1.64.0-node-browsers latest-node-browsers
+IMAGE NAME: registry.semaphoreci.com/haskell:9.2.4-buster, ALIASES: 9.2-buster 9.2.4 9.2
+IMAGE NAME: registry.semaphoreci.com/haskell:9.4.2-buster, ALIASES: 9.4-buster 9-buster buster 9.4.2 9.4 9 latest
+IMAGE NAME: registry.semaphoreci.com/haskell:9.0.2-buster, ALIASES: 9.0-buster 9.0.2 9.0
+IMAGE NAME: registry.semaphoreci.com/haskell:8.10.7-buster, ALIASES: 8.10-buster 8-buster 8.10.7 8.10 8
+
+
