@@ -154,8 +154,8 @@ RUN rm -rf /opt/flutter* \
     && cd /opt \
     && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.0.5-stable.tar.xz \
     && tar -xf flutter_linux_3.0.5-stable.tar.xz && mv flutter flutter_3.0.5 && rm -f flutter_linux_3.0.5-stable.tar.xz \
-    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.3.3-stable.tar.xz \
-    && tar -xf flutter_linux_3.3.3-stable.tar.xz && mv flutter flutter_3.3.3 && rm -f flutter_linux_3.3.3-stable.tar.xz \
+    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.3.10-stable.tar.xz \
+    && tar -xf flutter_linux_3.3.10-stable.tar.xz && mv flutter flutter_3.3.10 && rm -f flutter_linux_3.3.10-stable.tar.xz \
     && ln -s /opt/flutter_3.0.5 /opt/flutter 
 ENV PATH="${FLUTTER_ROOT}/bin:${PATH}"
 
@@ -164,7 +164,7 @@ RUN flutter config --no-analytics \
     && yes "y" | flutter doctor --android-licenses \
     && flutter doctor -v \
     && rm /opt/flutter \
-    && ln -s /opt/flutter_3.3.3 /opt/flutter \
+    && ln -s /opt/flutter_3.3.10 /opt/flutter \
     && flutter config  --no-analytics && flutter precache \
     && yes "y" | flutter doctor --android-licenses \
     && flutter doctor -v
