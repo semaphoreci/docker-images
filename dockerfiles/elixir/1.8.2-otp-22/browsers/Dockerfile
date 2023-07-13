@@ -5,14 +5,9 @@
 FROM registry.semaphoreci.com/elixir:1.8.2-otp-22
 
 # Install Java
-RUN if grep -q Debian /etc/os-release && grep -q stretch /etc/os-release; then \
-    echo 'deb http://deb.debian.org/debian stretch-backports main' | sudo tee -a /etc/apt/sources.list.d/stretch-backports.list; \
-    elif grep -q Ubuntu /etc/os-release && grep -q xenial /etc/os-release; then \
-    sudo apt-get update && sudo apt-get install -y software-properties-common && \
-    sudo add-apt-repository -y ppa:openjdk-r/ppa; \
-    fi && \
-    sudo apt-get update && sudo apt-get install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless && \
-    sudo apt-get install -y bzip2 libgconf-2-4
+RUN set -ex && sudo apt-get update && sudo apt-get install -y apt-utils && sudo apt-get dist-upgrade -f -y && sudo apt-get install -y bzip2 libgconf-2-4
+
+RUN if grep -q bookworm /etc/apt/sources.list.d/*; then sudo apt-get install -f -y openjdk-17-jre openjdk-17-jdk; else sudo apt-get install -y -f default-jre default-jdk; fi
 
 # Create Semaphore user
 RUN groupadd --gid 8592 semaphore

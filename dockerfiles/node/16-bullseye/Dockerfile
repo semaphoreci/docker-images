@@ -15,7 +15,6 @@ RUN apt-get update
 RUN echo 'Acquire::Check-Valid-Until no;' >> /etc/apt/apt.conf
 RUN apt-get install -y -m \
     git \
-    mercurial \
     xvfb \
     vim \
     apt \
@@ -31,7 +30,7 @@ RUN apt-get install -y -m \
     gzip \
     parallel \
     net-tools \
-    netcat \
+    netcat-traditional \
     unzip \
     zip \
     bzip2 \
