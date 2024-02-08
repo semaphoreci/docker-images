@@ -45,7 +45,7 @@ RUN locale-gen C.UTF-8 || true
 ENV LANG=C.UTF-8
 
 # Install Docker
-ENV DOCKER_COMPOSE=1.23.2
+ENV DOCKER_COMPOSE=2.24.5
 RUN set -ex \
     && export DOCKER_VERSION=$(curl --silent --fail --retry 3 https://download.docker.com/linux/static/stable/x86_64/ | grep -o -e 'docker-[.0-9]*\.tgz' | sort -r | head -n 1) \
     && DOCKER_URL="https://download.docker.com/linux/static/stable/x86_64/${DOCKER_VERSION}" \
@@ -60,7 +60,7 @@ RUN set -ex \
 
 # Install Compose
 RUN wget -q \
-    https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE}/docker-compose-`uname -s`-`uname -m` -O /usr/local/bin/docker-compose \
+    https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE}/docker-compose-`uname -s`-`uname -m` -O /usr/local/bin/docker-compose \
     && chmod +x /usr/local/bin/docker-compose \
     && docker-compose --version
 
