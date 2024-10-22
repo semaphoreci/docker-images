@@ -38,7 +38,6 @@ RUN apt-get install -y -m \
     gnupg \
     curl \
     wget \
-    build-essential \
     tree
 RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 RUN locale-gen C.UTF-8 || true
