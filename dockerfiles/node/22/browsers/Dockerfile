@@ -22,7 +22,7 @@ USER semaphore
 RUN FIREFOX_URL="https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" \
     && ACTUAL_URL=$(curl -Ls -o /dev/null -w %{url_effective} $FIREFOX_URL) \
     && curl --silent --show-error --location --fail --retry 3 --output /tmp/firefox.tar.bz2 $ACTUAL_URL \
-    && sudo tar -xvjf /tmp/firefox.tar.bz2 -C /opt \
+    && sudo tar -xvf /tmp/firefox.tar.bz2 -C /opt \
     && sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox \
     && sudo apt-get install -y libgtk3.0-cil-dev libasound2 libasound2 libdbus-glib-1-2 libdbus-1-3 \
     && rm -rf /tmp/firefox.* \
