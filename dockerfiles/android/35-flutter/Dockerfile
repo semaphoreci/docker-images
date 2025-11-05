@@ -3,7 +3,7 @@
 #
 # This file is generated automatically
 
-FROM openjdk:17-jdk-slim
+FROM openjdk:26-ea-17-jdk-slim-bookworm
 
 # Make APT non-interactive
 RUN echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/99semaphore
@@ -33,7 +33,7 @@ RUN apt-get install -y \
     gzip \
     parallel \
     net-tools \
-    netcat \
+    netcat-traditional \
     unzip \
     zip \
     bzip2 \
@@ -120,7 +120,7 @@ RUN echo 'gem: --env-shebang --no-rdoc --no-ri' >> ~/.gemrc && gem install bundl
 
 # Download Android SDK
 RUN cd /opt && mkdir -p ${ANDROID_HOME}/cmdline-tools/tools \
-    && wget -q https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip -O android-sdk-tools.zip \
+    && wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O android-sdk-tools.zip \
     && unzip -q android-sdk-tools.zip \
     && mv cmdline-tools/* ${ANDROID_HOME}/cmdline-tools/tools/ \
     && rm -rf android-sdk-tools.zip cmdline-tools
@@ -131,7 +131,7 @@ RUN mkdir ~/.android && echo "### User Sources for Android SDK Manager" > ~/.and
 RUN yes | sdkmanager --licenses && yes | sdkmanager --update
 RUN sdkmanager "emulator" "tools" "platform-tools" "cmdline-tools;latest"
 RUN yes | sdkmanager \
-    "build-tools;34.0.0" 
+    "build-tools;35.0.1" 
 # Download Google Cloud SDK
 RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
     echo "deb https://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
@@ -153,11 +153,11 @@ RUN sdkmanager "platforms;android-35"
 ENV FLUTTER_ROOT="/opt/flutter"
 RUN rm -rf /opt/flutter* \
     && cd /opt \
-    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.22.0-stable.tar.xz \
-    && tar -xf flutter_linux_3.22.0-stable.tar.xz && mv flutter flutter_3.22.0 && rm -f flutter_linux_3.22.0-stable.tar.xz \
     && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.24.0-stable.tar.xz \
     && tar -xf flutter_linux_3.24.0-stable.tar.xz && mv flutter flutter_3.24.0 && rm -f flutter_linux_3.24.0-stable.tar.xz \
-    && ln -s /opt/flutter_3.22.0 /opt/flutter \
+    && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.35.0-stable.tar.xz \
+    && tar -xf flutter_linux_3.35.0-stable.tar.xz && mv flutter flutter_3.35.0 && rm -f flutter_linux_3.35.0-stable.tar.xz \
+    && ln -s /opt/flutter_3.24.0 /opt/flutter \
     && chown -R root:root /opt/flutter_*
 ENV PATH="${FLUTTER_ROOT}/bin:${PATH}"
 
@@ -166,7 +166,7 @@ RUN flutter config --no-analytics \
     && yes "y" | flutter doctor --android-licenses \
     && flutter doctor -v \
     && rm /opt/flutter \
-    && ln -s /opt/flutter_3.24.0 /opt/flutter \
+    && ln -s /opt/flutter_3.35.0 /opt/flutter \
     && flutter config  --no-analytics && flutter precache \
     && yes "y" | flutter doctor --android-licenses \
     && flutter doctor -v
