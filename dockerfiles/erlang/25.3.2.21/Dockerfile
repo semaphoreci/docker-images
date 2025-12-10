@@ -44,7 +44,7 @@ RUN locale-gen C.UTF-8 || true
 ENV LANG=C.UTF-8
 
 # Install Docker
-ENV DOCKER_COMPOSE=2.24.5
+ENV DOCKER_COMPOSE=2.40.3
 RUN set -ex \
     && export DOCKER_VERSION=$(curl --silent --fail --retry 3 https://download.docker.com/linux/static/stable/$(uname -m)/ | grep -o -e 'docker-[.0-9]*\.tgz' | sort -r | head -n 1) \
     && DOCKER_URL="https://download.docker.com/linux/static/stable/$(uname -m)/${DOCKER_VERSION}" \
