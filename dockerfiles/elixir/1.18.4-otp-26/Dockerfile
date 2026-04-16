@@ -21,9 +21,9 @@ RUN apt-get install -y -m \
     locales \
     sudo \
     apt-transport-https \
+    apt-utils \
     ca-certificates \
     openssh-client \
-    software-properties-common \
     build-essential \
     tar \
     lsb-release \
@@ -44,10 +44,10 @@ RUN locale-gen C.UTF-8 || true
 ENV LANG=C.UTF-8
 
 # Install Docker
-ENV DOCKER_COMPOSE=2.24.5
+ENV DOCKER_COMPOSE=2.40.3
 RUN set -ex \
-    && export DOCKER_VERSION=$(curl --silent --fail --retry 3 https://download.docker.com/linux/static/stable/x86_64/ | grep -o -e 'docker-[.0-9]*\.tgz' | sort -r | head -n 1) \
-    && DOCKER_URL="https://download.docker.com/linux/static/stable/x86_64/${DOCKER_VERSION}" \
+    && export DOCKER_VERSION=$(curl --silent --fail --retry 3 https://download.docker.com/linux/static/stable/$(uname -m)/ | grep -o -e 'docker-[.0-9]*\.tgz' | sort -r | head -n 1) \
+    && DOCKER_URL="https://download.docker.com/linux/static/stable/$(uname -m)/${DOCKER_VERSION}" \
     && echo Docker URL: $DOCKER_URL \
     && curl --silent --show-error --location --fail --retry 3 --output /tmp/docker.tgz "${DOCKER_URL}" \
     && ls -lha /tmp/docker.tgz \

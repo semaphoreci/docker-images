@@ -1,0 +1,244 @@
+Docker repository update Thu Apr 16 10:47:16 PM UTC 2026
+-----------------------------------
+
+
+IMAGE NAME: registry.semaphoreci.com/ruby:4.0.2-trixie, ALIASES: 4.0-trixie 4-trixie trixie 4.0.2 4.0 4 latest
+IMAGE NAME: registry.semaphoreci.com/ruby:3.4.9-trixie, ALIASES: 3.4-trixie 3-trixie 3.4.9 3.4 3
+IMAGE NAME: registry.semaphoreci.com/ruby:3.3.11-trixie, ALIASES: 3.3-trixie 3.3.11 3.3
+IMAGE NAME: registry.semaphoreci.com/ruby:3.2.11-trixie, ALIASES: 3.2-trixie 3.2.11 3.2
+IMAGE NAME: registry.semaphoreci.com/ruby:3.4.9-bookworm, ALIASES: 3.4-bookworm 3-bookworm
+IMAGE NAME: registry.semaphoreci.com/ruby:4.0.2-bookworm, ALIASES: 4.0-bookworm 4-bookworm bookworm
+IMAGE NAME: registry.semaphoreci.com/ruby:3.2.11-bookworm, ALIASES: 3.2-bookworm
+IMAGE NAME: registry.semaphoreci.com/ruby:3.3.11-bookworm, ALIASES: 3.3-bookworm
+IMAGE NAME: registry.semaphoreci.com/ruby:4.0.2-trixie-node, ALIASES: 4.0-trixie-node 4-trixie-node trixie-node 4.0.2-node 4.0-node 4-node latest-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.4.9-trixie-node, ALIASES: 3.4-trixie-node 3-trixie-node 3.4.9-node 3.4-node 3-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.3.11-trixie-node, ALIASES: 3.3-trixie-node 3.3.11-node 3.3-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.2.11-trixie-node, ALIASES: 3.2-trixie-node 3.2.11-node 3.2-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.4.9-bookworm-node, ALIASES: 3.4-bookworm-node 3-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/ruby:4.0.2-bookworm-node, ALIASES: 4.0-bookworm-node 4-bookworm-node bookworm-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.2.11-bookworm-node, ALIASES: 3.2-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/ruby:3.3.11-bookworm-node, ALIASES: 3.3-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/ruby:4.0.2-trixie-browsers, ALIASES: 4.0-trixie-browsers 4-trixie-browsers trixie-browsers 4.0.2-browsers 4.0-browsers 4-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.4.9-trixie-browsers, ALIASES: 3.4-trixie-browsers 3-trixie-browsers 3.4.9-browsers 3.4-browsers 3-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.3.11-trixie-browsers, ALIASES: 3.3-trixie-browsers 3.3.11-browsers 3.3-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.2.11-trixie-browsers, ALIASES: 3.2-trixie-browsers 3.2.11-browsers 3.2-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.4.9-bookworm-browsers, ALIASES: 3.4-bookworm-browsers 3-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:4.0.2-bookworm-browsers, ALIASES: 4.0-bookworm-browsers 4-bookworm-browsers bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.2.11-bookworm-browsers, ALIASES: 3.2-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.3.11-bookworm-browsers, ALIASES: 3.3-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:4.0.2-trixie-node-browsers, ALIASES: 4.0-trixie-node-browsers 4-trixie-node-browsers trixie-node-browsers 4.0.2-node-browsers 4.0-node-browsers 4-node-browsers latest-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.4.9-trixie-node-browsers, ALIASES: 3.4-trixie-node-browsers 3-trixie-node-browsers 3.4.9-node-browsers 3.4-node-browsers 3-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.3.11-trixie-node-browsers, ALIASES: 3.3-trixie-node-browsers 3.3.11-node-browsers 3.3-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.2.11-trixie-node-browsers, ALIASES: 3.2-trixie-node-browsers 3.2.11-node-browsers 3.2-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.4.9-bookworm-node-browsers, ALIASES: 3.4-bookworm-node-browsers 3-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:4.0.2-bookworm-node-browsers, ALIASES: 4.0-bookworm-node-browsers 4-bookworm-node-browsers bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.2.11-bookworm-node-browsers, ALIASES: 3.2-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/ruby:3.3.11-bookworm-node-browsers, ALIASES: 3.3-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4, ALIASES: 3.14 3 latest
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13, ALIASES: 3.13
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13, ALIASES: 3.12
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20, ALIASES: 3.10
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15, ALIASES: 3.11
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8, ALIASES: 3.15-rc
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-node, ALIASES: 3.14-node 3-node latest-node
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-node, ALIASES: 3.13-node
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-node, ALIASES: 3.12-node
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-node, ALIASES: 3.10-node
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-node, ALIASES: 3.11-node
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-trixie, ALIASES: 3.14-trixie 3-trixie trixie
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-node, ALIASES: 3.15-rc-node
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-trixie, ALIASES: 3.11-trixie
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-trixie, ALIASES: 3.13-trixie
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-trixie, ALIASES: 3.10-trixie
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-trixie, ALIASES: 3.12-trixie
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-browsers, ALIASES: 3.14-browsers 3-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-bookworm, ALIASES: 3.14-bookworm 3-bookworm bookworm
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-trixie, ALIASES: 3.15-rc-trixie
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-bookworm, ALIASES: 3.13-bookworm
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-browsers, ALIASES: 3.13-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-bookworm, ALIASES: 3.10-bookworm
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-browsers, ALIASES: 3.12-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-bookworm, ALIASES: 3.12-bookworm
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-browsers, ALIASES: 3.10-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-browsers, ALIASES: 3.11-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-bookworm, ALIASES: 3.11-bookworm
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-browsers, ALIASES: 3.15-rc-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-bookworm, ALIASES: 3.15-rc-bookworm
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-trixie-node, ALIASES: 3.14-trixie-node 3-trixie-node trixie-node
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-trixie-node, ALIASES: 3.11-trixie-node
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-trixie-node, ALIASES: 3.13-trixie-node
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-trixie-node, ALIASES: 3.10-trixie-node
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-trixie-node, ALIASES: 3.12-trixie-node
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-node-browsers, ALIASES: 3.14-node-browsers 3-node-browsers latest-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-bookworm-node, ALIASES: 3.14-bookworm-node 3-bookworm-node bookworm-node
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-trixie-node, ALIASES: 3.15-rc-trixie-node
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-bookworm-node, ALIASES: 3.13-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-node-browsers, ALIASES: 3.13-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-bookworm-node, ALIASES: 3.10-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-node-browsers, ALIASES: 3.12-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-bookworm-node, ALIASES: 3.12-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-node-browsers, ALIASES: 3.10-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-node-browsers, ALIASES: 3.11-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-bookworm-node, ALIASES: 3.11-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-trixie-browsers, ALIASES: 3.14-trixie-browsers 3-trixie-browsers trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-node-browsers, ALIASES: 3.15-rc-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-bookworm-node, ALIASES: 3.15-rc-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-trixie-browsers, ALIASES: 3.11-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-trixie-browsers, ALIASES: 3.13-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-trixie-browsers, ALIASES: 3.10-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-trixie-browsers, ALIASES: 3.12-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-bookworm-browsers, ALIASES: 3.14-bookworm-browsers 3-bookworm-browsers bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-trixie-browsers, ALIASES: 3.15-rc-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-bookworm-browsers, ALIASES: 3.13-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-bookworm-browsers, ALIASES: 3.10-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-bookworm-browsers, ALIASES: 3.12-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-bookworm-browsers, ALIASES: 3.11-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-bookworm-browsers, ALIASES: 3.15-rc-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-trixie-node-browsers, ALIASES: 3.14-trixie-node-browsers 3-trixie-node-browsers trixie-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-trixie-node-browsers, ALIASES: 3.11-trixie-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-trixie-node-browsers, ALIASES: 3.13-trixie-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-trixie-node-browsers, ALIASES: 3.10-trixie-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-trixie-node-browsers, ALIASES: 3.12-trixie-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.14.4-bookworm-node-browsers, ALIASES: 3.14-bookworm-node-browsers 3-bookworm-node-browsers bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-trixie-node-browsers, ALIASES: 3.15-rc-trixie-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.13.13-bookworm-node-browsers, ALIASES: 3.13-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.10.20-bookworm-node-browsers, ALIASES: 3.10-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.12.13-bookworm-node-browsers, ALIASES: 3.12-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.11.15-bookworm-node-browsers, ALIASES: 3.11-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/python:3.15.0a8-bookworm-node-browsers, ALIASES: 3.15-rc-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/node:20, ALIASES: 20-bookworm 20.20 20.20-bookworm 20.20.2 20.20.2-bookworm iron iron-bookworm
+IMAGE NAME: registry.semaphoreci.com/node:24, ALIASES: 24-bookworm 24.14 24.14-bookworm 24.14.1 24.14.1-bookworm krypton krypton-bookworm lts lts-bookworm lts-krypton
+IMAGE NAME: registry.semaphoreci.com/node:22, ALIASES: 22-bookworm 22.22 22.22-bookworm 22.22.2 22.22.2-bookworm jod jod-bookworm
+IMAGE NAME: registry.semaphoreci.com/node:25, ALIASES: 25-bookworm 25.9 25.9-bookworm 25.9.0 25.9.0-bookworm bookworm current current-bookworm latest
+IMAGE NAME: registry.semaphoreci.com/node:20-trixie, ALIASES: 20.20-trixie 20.20.2-trixie iron-trixie
+IMAGE NAME: registry.semaphoreci.com/node:22-trixie, ALIASES: 22.22-trixie 22.22.2-trixie jod-trixie
+IMAGE NAME: registry.semaphoreci.com/node:24-trixie, ALIASES: 24.14-trixie 24.14.1-trixie krypton-trixie lts-trixie
+IMAGE NAME: registry.semaphoreci.com/node:25-trixie, ALIASES: 25.9-trixie 25.9.0-trixie current-trixie trixie
+IMAGE NAME: registry.semaphoreci.com/node:20-browsers, ALIASES: 20-bookworm-browsers 20.20-browsers 20.20-bookworm-browsers 20.20.2-browsers 20.20.2-bookworm-browsers iron-browsers iron-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/node:22-bullseye, ALIASES: 22.22-bullseye 22.22.2-bullseye jod-bullseye
+IMAGE NAME: registry.semaphoreci.com/node:24-browsers, ALIASES: 24-bookworm-browsers 24.14-browsers 24.14-bookworm-browsers 24.14.1-browsers 24.14.1-bookworm-browsers krypton-browsers krypton-bookworm-browsers lts-browsers lts-bookworm-browsers lts-krypton-browsers
+IMAGE NAME: registry.semaphoreci.com/node:22-browsers, ALIASES: 22-bookworm-browsers 22.22-browsers 22.22-bookworm-browsers 22.22.2-browsers 22.22.2-bookworm-browsers jod-browsers jod-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/node:25-browsers, ALIASES: 25-bookworm-browsers 25.9-browsers 25.9-bookworm-browsers 25.9.0-browsers 25.9.0-bookworm-browsers bookworm-browsers current-browsers current-bookworm-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/node:25-bullseye, ALIASES: 25.9-bullseye 25.9.0-bullseye bullseye current-bullseye
+IMAGE NAME: registry.semaphoreci.com/node:24-bullseye, ALIASES: 24.14-bullseye 24.14.1-bullseye krypton-bullseye lts-bullseye
+IMAGE NAME: registry.semaphoreci.com/node:20-bullseye, ALIASES: 20.20-bullseye 20.20.2-bullseye iron-bullseye
+IMAGE NAME: registry.semaphoreci.com/node:20-trixie-browsers, ALIASES: 20.20-trixie-browsers 20.20.2-trixie-browsers iron-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/node:22-trixie-browsers, ALIASES: 22.22-trixie-browsers 22.22.2-trixie-browsers jod-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/node:24-trixie-browsers, ALIASES: 24.14-trixie-browsers 24.14.1-trixie-browsers krypton-trixie-browsers lts-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/node:25-trixie-browsers, ALIASES: 25.9-trixie-browsers 25.9.0-trixie-browsers current-trixie-browsers trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/node:22-bullseye-browsers, ALIASES: 22.22-bullseye-browsers 22.22.2-bullseye-browsers jod-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/node:25-bullseye-browsers, ALIASES: 25.9-bullseye-browsers 25.9.0-bullseye-browsers bullseye-browsers current-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/node:24-bullseye-browsers, ALIASES: 24.14-bullseye-browsers 24.14.1-bullseye-browsers krypton-bullseye-browsers lts-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/node:20-bullseye-browsers, ALIASES: 20.20-bullseye-browsers 20.20.2-bullseye-browsers iron-bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/android:36, ALIASES: no aliases
+IMAGE NAME: registry.semaphoreci.com/android:36-node, ALIASES: no aliases
+IMAGE NAME: registry.semaphoreci.com/android:36-flutter, ALIASES: no aliases
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4, ALIASES: 1.18 1.18.4-otp-28 1.18-otp-28
+IMAGE NAME: registry.semaphoreci.com/elixir:1.19.5, ALIASES: 1.19 latest 1.19.5-otp-28 1.19-otp-28 otp-28
+IMAGE NAME: registry.semaphoreci.com/elixir:1.15.8, ALIASES: 1.15 1.15.8-otp-26 1.15-otp-26
+IMAGE NAME: registry.semaphoreci.com/elixir:1.16.3, ALIASES: 1.16 1.16.3-otp-26 1.16-otp-26
+IMAGE NAME: registry.semaphoreci.com/elixir:1.17.3, ALIASES: 1.17 1.17.3-otp-27 1.17-otp-27
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-node, ALIASES: 1.18-node 1.18.4-otp-28-node 1.18-otp-28-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.19.5-node, ALIASES: 1.19-node latest-node 1.19.5-otp-28-node 1.19-otp-28-node otp-28-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.15.8-node, ALIASES: 1.15-node 1.15.8-otp-26-node 1.15-otp-26-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.16.3-node, ALIASES: 1.16-node 1.16.3-otp-26-node 1.16-otp-26-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.17.3-node, ALIASES: 1.17-node 1.17.3-otp-27-node 1.17-otp-27-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-otp-26, ALIASES: 1.18-otp-26
+IMAGE NAME: registry.semaphoreci.com/elixir:1.15.8-otp-25, ALIASES: 1.15-otp-25
+IMAGE NAME: registry.semaphoreci.com/elixir:1.19.5-otp-27, ALIASES: 1.19-otp-27 otp-27
+IMAGE NAME: registry.semaphoreci.com/elixir:1.16.3-otp-24, ALIASES: 1.16-otp-24
+IMAGE NAME: registry.semaphoreci.com/elixir:1.19.5-otp-26, ALIASES: 1.19-otp-26 otp-26
+IMAGE NAME: registry.semaphoreci.com/elixir:1.17.3-otp-25, ALIASES: 1.17-otp-25
+IMAGE NAME: registry.semaphoreci.com/elixir:1.16.3-otp-25, ALIASES: 1.16-otp-25
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-otp-25, ALIASES: 1.18-otp-25
+IMAGE NAME: registry.semaphoreci.com/elixir:1.17.3-otp-26, ALIASES: 1.17-otp-26
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-otp-27, ALIASES: 1.18-otp-27
+IMAGE NAME: registry.semaphoreci.com/elixir:1.15.8-otp-24, ALIASES: 1.15-otp-24
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-browsers, ALIASES: 1.18-browsers 1.18.4-otp-28-browsers 1.18-otp-28-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.19.5-browsers, ALIASES: 1.19-browsers latest-browsers 1.19.5-otp-28-browsers 1.19-otp-28-browsers otp-28-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.15.8-browsers, ALIASES: 1.15-browsers 1.15.8-otp-26-browsers 1.15-otp-26-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.16.3-browsers, ALIASES: 1.16-browsers 1.16.3-otp-26-browsers 1.16-otp-26-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.17.3-browsers, ALIASES: 1.17-browsers 1.17.3-otp-27-browsers 1.17-otp-27-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-otp-26-node, ALIASES: 1.18-otp-26-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.15.8-otp-25-node, ALIASES: 1.15-otp-25-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.19.5-otp-27-node, ALIASES: 1.19-otp-27-node otp-27-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.16.3-otp-24-node, ALIASES: 1.16-otp-24-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.19.5-otp-26-node, ALIASES: 1.19-otp-26-node otp-26-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.17.3-otp-25-node, ALIASES: 1.17-otp-25-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.16.3-otp-25-node, ALIASES: 1.16-otp-25-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-otp-25-node, ALIASES: 1.18-otp-25-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.17.3-otp-26-node, ALIASES: 1.17-otp-26-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-otp-27-node, ALIASES: 1.18-otp-27-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.15.8-otp-24-node, ALIASES: 1.15-otp-24-node
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-otp-26-browsers, ALIASES: 1.18-otp-26-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.15.8-otp-25-browsers, ALIASES: 1.15-otp-25-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.19.5-otp-27-browsers, ALIASES: 1.19-otp-27-browsers otp-27-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.16.3-otp-24-browsers, ALIASES: 1.16-otp-24-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.19.5-otp-26-browsers, ALIASES: 1.19-otp-26-browsers otp-26-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.17.3-otp-25-browsers, ALIASES: 1.17-otp-25-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.16.3-otp-25-browsers, ALIASES: 1.16-otp-25-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-otp-25-browsers, ALIASES: 1.18-otp-25-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.17.3-otp-26-browsers, ALIASES: 1.17-otp-26-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.18.4-otp-27-browsers, ALIASES: 1.18-otp-27-browsers
+IMAGE NAME: registry.semaphoreci.com/elixir:1.15.8-otp-24-browsers, ALIASES: 1.15-otp-24-browsers
+IMAGE NAME: registry.semaphoreci.com/erlang:28.4.2.0, ALIASES: 28.4.2 28.4 28 latest
+IMAGE NAME: registry.semaphoreci.com/erlang:25.3.2.21, ALIASES: 25.3.2 25.3 25
+IMAGE NAME: registry.semaphoreci.com/erlang:26.2.5.19, ALIASES: 26.2.5 26.2 26
+IMAGE NAME: registry.semaphoreci.com/erlang:24.3.4.17, ALIASES: 24.3.4 24.3 24
+IMAGE NAME: registry.semaphoreci.com/erlang:27.3.4.10, ALIASES: 27.3.4 27.3 27
+IMAGE NAME: registry.semaphoreci.com/erlang:29.0.0.0-rc2, ALIASES: 29.0.0 29.0 29
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9, ALIASES: 1.25
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2, ALIASES: 1.26 1 latest
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-node, ALIASES: 1.25-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-node, ALIASES: 1.26-node 1-node latest-node
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411, ALIASES: tip
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-trixie, ALIASES: 1.25-trixie
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-trixie, ALIASES: 1.26-trixie 1-trixie trixie
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-browsers, ALIASES: 1.25-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-bookworm, ALIASES: 1.26-bookworm 1-bookworm bookworm
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-bookworm, ALIASES: 1.25-bookworm
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-browsers, ALIASES: 1.26-browsers 1-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-node, ALIASES: tip-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-trixie-node, ALIASES: 1.25-trixie-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-trixie-node, ALIASES: 1.26-trixie-node 1-trixie-node trixie-node
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-trixie, ALIASES: tip-trixie
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-node-browsers, ALIASES: 1.25-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-bookworm-node, ALIASES: 1.26-bookworm-node 1-bookworm-node bookworm-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-bookworm-node, ALIASES: 1.25-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-node-browsers, ALIASES: 1.26-node-browsers 1-node-browsers latest-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-bookworm, ALIASES: tip-bookworm
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-browsers, ALIASES: tip-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-trixie-browsers, ALIASES: 1.25-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-trixie-browsers, ALIASES: 1.26-trixie-browsers 1-trixie-browsers trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-bookworm-browsers, ALIASES: 1.26-bookworm-browsers 1-bookworm-browsers bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-bookworm-browsers, ALIASES: 1.25-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-trixie-node, ALIASES: tip-trixie-node
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-bookworm-node, ALIASES: tip-bookworm-node
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-node-browsers, ALIASES: tip-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-trixie-node-browsers, ALIASES: 1.25-trixie-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-trixie-node-browsers, ALIASES: 1.26-trixie-node-browsers 1-trixie-node-browsers trixie-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-trixie-browsers, ALIASES: tip-trixie-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.26.2-bookworm-node-browsers, ALIASES: 1.26-bookworm-node-browsers 1-bookworm-node-browsers bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:1.25.9-bookworm-node-browsers, ALIASES: 1.25-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-bookworm-browsers, ALIASES: tip-bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-trixie-node-browsers, ALIASES: tip-trixie-node-browsers
+IMAGE NAME: registry.semaphoreci.com/golang:tip-20260411-bookworm-node-browsers, ALIASES: tip-bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-trixie, ALIASES: 1.94-trixie 1.94.1-trixie trixie 1 1.94 1.94.1 latest
+IMAGE NAME: registry.semaphoreci.com/rust:1-bookworm, ALIASES: 1.94-bookworm 1.94.1-bookworm bookworm
+IMAGE NAME: registry.semaphoreci.com/rust:1-bullseye, ALIASES: 1.94-bullseye 1.94.1-bullseye bullseye
+IMAGE NAME: registry.semaphoreci.com/rust:1-trixie-node, ALIASES: 1.94-trixie-node 1.94.1-trixie-node trixie-node 1-node 1.94-node 1.94.1-node latest-node
+IMAGE NAME: registry.semaphoreci.com/rust:1-bookworm-node, ALIASES: 1.94-bookworm-node 1.94.1-bookworm-node bookworm-node
+IMAGE NAME: registry.semaphoreci.com/rust:1-bullseye-node, ALIASES: 1.94-bullseye-node 1.94.1-bullseye-node bullseye-node
+IMAGE NAME: registry.semaphoreci.com/rust:1-trixie-browsers, ALIASES: 1.94-trixie-browsers 1.94.1-trixie-browsers trixie-browsers 1-browsers 1.94-browsers 1.94.1-browsers latest-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-bookworm-browsers, ALIASES: 1.94-bookworm-browsers 1.94.1-bookworm-browsers bookworm-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-bullseye-browsers, ALIASES: 1.94-bullseye-browsers 1.94.1-bullseye-browsers bullseye-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-trixie-node-browsers, ALIASES: 1.94-trixie-node-browsers 1.94.1-trixie-node-browsers trixie-node-browsers 1-node-browsers 1.94-node-browsers 1.94.1-node-browsers latest-node-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-bookworm-node-browsers, ALIASES: 1.94-bookworm-node-browsers 1.94.1-bookworm-node-browsers bookworm-node-browsers
+IMAGE NAME: registry.semaphoreci.com/rust:1-bullseye-node-browsers, ALIASES: 1.94-bullseye-node-browsers 1.94.1-bullseye-node-browsers bullseye-node-browsers
+IMAGE NAME: registry.semaphoreci.com/haskell:9.6.4-buster, ALIASES: 9.6-buster 9.6.4 9.6
+IMAGE NAME: registry.semaphoreci.com/haskell:9.2.8-buster, ALIASES: 9.2-buster 9.2.8 9.2
+IMAGE NAME: registry.semaphoreci.com/haskell:9.0.2-buster, ALIASES: 9.0-buster 9.0.2 9.0
+IMAGE NAME: registry.semaphoreci.com/haskell:9.8.1-buster, ALIASES: 9.8-buster 9-buster buster 9.8.1 9.8 9 latest
+IMAGE NAME: registry.semaphoreci.com/haskell:9.4.8-buster, ALIASES: 9.4-buster 9.4.8 9.4
+
+

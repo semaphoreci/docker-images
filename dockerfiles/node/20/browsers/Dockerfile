@@ -5,9 +5,9 @@
 FROM registry.semaphoreci.com/node:20
 
 # Install Java
-RUN set -ex && sudo apt-get update && sudo apt-get install -y apt-utils && sudo apt-get dist-upgrade -f -y && sudo apt-get install -y bzip2 libgconf-2-4
+RUN set -ex && sudo apt-get update && sudo apt-get install -y apt-utils && sudo apt-get dist-upgrade -f -y && sudo apt-get install -f -y default-jre default-jdk bzip2
 
-RUN if grep -q bookworm /etc/apt/sources.list.d/*; then sudo apt-get install -f -y openjdk-17-jre openjdk-17-jdk; else sudo apt-get install -y -f default-jre default-jdk; fi
+RUN  sudo apt-get install -f -y libgtk3.0-cil-dev libgconf-2-4 || true
 
 # Create Semaphore user
 RUN groupadd --gid 8592 semaphore
@@ -19,17 +19,20 @@ RUN echo 'Defaults    env_keep += "DEBIAN_FRONTEND"' >> /etc/sudoers.d/env_keep
 USER semaphore
 
 # Install firefox
-RUN FIREFOX_URL="https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" \
+RUN OS="" \
+    && if [ "$BUILDARCH" = "aarch64" ] ; then OS='linux64-aarch64';else OS='linux64'; fi \
+    && FIREFOX_URL="https://download.mozilla.org/?product=firefox-latest-ssl&os=${OS}&lang=en-US" \
     && ACTUAL_URL=$(curl -Ls -o /dev/null -w %{url_effective} $FIREFOX_URL) \
     && curl --silent --show-error --location --fail --retry 3 --output /tmp/firefox.tar.bz2 $ACTUAL_URL \
     && sudo tar -xvf /tmp/firefox.tar.bz2 -C /opt \
     && sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox \
-    && sudo apt-get install -y libgtk3.0-cil-dev libasound2 libasound2 libdbus-glib-1-2 libdbus-1-3 \
+    && sudo apt-get install -y libasound2 libasound2 libdbus-glib-1-2 libdbus-1-3 \
     && rm -rf /tmp/firefox.* \
     && firefox --version
 
 # Install Chrome and ChromeDriver
-RUN CHROME_VERSION="$(curl https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_STABLE)" \
+RUN if [ "$BUILDARCH" =~ 'x86_64' ] ; then \
+    CHROME_VERSION="$(curl -sSf https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-amd64/Packages | grep -A1 'Package: google-chrome-stable' | awk '/Version/{print $2}' | cut -d '-' -f1)" \
     && curl --silent --show-error --location --fail --retry 3 --output /tmp/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}-1_amd64.deb \
     && curl --silent --show-error --location --fail --retry 3 --output /tmp/chromedriver_linux64.zip "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/${CHROME_VERSION}/linux64/chromedriver-linux64.zip" \
     && (sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb || sudo apt-get -fy install) \
@@ -41,10 +44,10 @@ RUN CHROME_VERSION="$(curl https://googlechromelabs.github.io/chrome-for-testing
     && rm -rf chromedriver_linux64.zip \
     && sudo mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver \
     && sudo chmod +x /usr/local/bin/chromedriver \
-    && chromedriver --version
+    && chromedriver --version ; fi
 
 # start xvfb automatically
-ENV DISPLAY :99
+ENV DISPLAY=":99"
 RUN printf '#!/bin/sh\nXvfb :99 -screen 0 1280x1024x24 &\nexec "$@"\n' > /tmp/entrypoint
 RUN chmod +x /tmp/entrypoint
 RUN sudo mv /tmp/entrypoint /docker-entrypoint.sh
